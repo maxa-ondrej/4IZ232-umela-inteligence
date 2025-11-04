@@ -119,46 +119,40 @@ V rámci objektových vlastnosti bylo vymezeno deset sloves, které formulují d
 \end{itemize}
 
 \subsection{Instance tříd}
-\subsection{Sekce o tom}
-\label{subsec:uvod-o-tom}
-
-Text.
-
-Odkazy na zdroje se po vyplnění bibliografické citace v sekci Reference vkládají do textu přes \verb|\cite{xxx}|. ,,Nějaká zajímavá myšlenka z jiné knihy`` \cite{autor-jina-kniha}. Většinou je ale práce s literaturou o vybrání důležitých myšlenek a jejich stručném shrnutí vlastními slovy. Parafráze zajímavých myšlenek z nějaké knihy, viz \cite{autor-nejaka-kniha}.
-
-\subsection{Sekce o onom}
-\label{subsec:uvod-o-onom}
-
-Text.
- 
-\section{Metody}
-\label{sec:metody}
-
-Text. Mělo by tu být zhruba:
+Mezi instance byly vybírány konkrétní objekty, které splňují vlastnosti a vztahy jim přiřazených tříd. V rámci konstrukce třídní hierarchie byly některé původně zamýšlené třídy převedeny na instance, jedná se o:
 \begin{itemize}
-	\item Popis postupu (návrh a realizace/experimenty), jak jste se dostali k výsledku z následující sekce.
-	\item Případné využití generativní AI by také mělo být zdokumentováno zde, detaily promptů v přílohách.
-	\item Cílem této sekce je umožnit čtenáři, aby provedl to, co vy a mohl si ověřit, že dojde ke stejnému/srovnatelnému výsledku.
+    \item formát - (audio, elektronický a tištěný formát)
+    \item jazyk - (anglický a český)
+    \item žánr - (fantasy, sci-fi a romantika)
 \end{itemize}
+Kromě zmíněných instací, které byly vytvořeny v rámci tvoření třídní hierarchie lze vytvářet instance nové, které model pomocí logických vztahů klasifikuje.
+
+\subsection{Úplné definice}
+Po vytvoření hierarchie tříd a objektových vlastností a instancí, které vznikly odtrhnutím z třídní hierarchie bylo možné přistoupit k tvorbě úplných definic některých tříd.
+Mezi hlavní z úplných definic jsou řazeny:
+\begin{itemize}
+    \item tištěná kniha je ekvivalentní knize v nějakém jazyce kterou napsal nějaký autor a má tištěný formát
+    \item audiokniha je ekvivalentní knize v nějakém jazyce kterou napsal nějaký autor a má audio formát
+    \item databáze audioknih je ekvivalentní knihovně která má audio formát
+    \item autor je ekvivalentní osobě která napsala nějakou knihu
+    \item e-shop je je ekvivalentní knihovně která má elektronický formát
+
+\end{itemize}
+Po zadání úplných definic je systém schopen klasifikovat nové instance, které logickými vzahy spadají pod nějakou třídu. Např. po vytvoření instance \textit{Zaklínač 1: Poslední prání}, která je knihou, je v jazyce čeština a má tištěný formát jí Protége reasoner přiřadí do třídy tištěná kniha.
+  
 
 \section{Výsledky}
 \label{sec:vysledky}
-
+V rámci práce byl vytvořen systém znalostní ontologie, který 
 Text. Mělo by tu být zhruba:
+
+
 \begin{itemize}
 	\item Popis výsledku (vytvořený model, chování systému, konkrétní měření experimentů), tj. co vám vyšlo, když jste provedli postup z předchozí sekce.
 	\item Je vhodné odkázat na detaily v příloze, ale neměl by tu být jen odkaz.
 	\item Cílem sekce je komunikovat čtenáři výsledek práce a umožnit mu srovnání při replikaci.
 \end{itemize}
 
-Obrázky, tabulky a podobně se vkládají nejprve jako plovoucí objekt. V textu by měla být zmínka o obrázku s křížovým odkazem na jeho značku, np.: Na obrázku \ref{fig:obrazek-neceho} je schéma něčeho. Křížové odkazy lze nastavit, aby zobrazovaly i stránku, což se může u plovoucích objektů hodit.
-
-\begin{figure}
-	\centering
-	%\includegraphics[width=1.0\linewidth]{cesta-k-obrazku.jpg}
-	Sem se teprve vloží vlastní obrázek pomocí \verb|includegraphics|. Obvykle je potřeba nastavit nějaké rozumné rozměry, nejlépe relativně k šířce řádku a zarovnat obrázek na střed.
-	\caption{Stručný popisek obrázku – pokud je přejatý pak s odkazem \cite{malir-obrazek-neceho}.\label{fig:obrazek-neceho}}
-\end{figure}
 
 
 \section{Diskuze}
