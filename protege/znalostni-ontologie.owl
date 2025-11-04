@@ -168,6 +168,12 @@
                 <ObjectProperty IRI="#jeVJazyce"/>
                 <Class IRI="#Jazyk"/>
             </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectInverseOf>
+                    <ObjectProperty IRI="#napsalKnihu"/>
+                </ObjectInverseOf>
+                <Class IRI="#Autor"/>
+            </ObjectSomeValuesFrom>
             <ObjectHasValue>
                 <ObjectProperty IRI="#máFormát"/>
                 <NamedIndividual IRI="#AudioFormát"/>
@@ -207,6 +213,12 @@
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#jeVJazyce"/>
                 <Class IRI="#Jazyk"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectInverseOf>
+                    <ObjectProperty IRI="#napsalKnihu"/>
+                </ObjectInverseOf>
+                <Class IRI="#Autor"/>
             </ObjectSomeValuesFrom>
             <ObjectHasValue>
                 <ObjectProperty IRI="#máFormát"/>
