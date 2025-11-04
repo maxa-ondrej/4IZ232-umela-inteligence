@@ -417,7 +417,7 @@
         <NamedIndividual IRI="#Čeština"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Tištěná_kniha"/>
+        <Class IRI="#Kniha"/>
         <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
