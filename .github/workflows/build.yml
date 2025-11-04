@@ -19,7 +19,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate Referat
-        run: xelatex referat.tex
+        uses: ./.github/actions/generate
+        with:
+          file: referat.tex
 
       - name: Generate Artifact
         uses: actions/upload-artifact@v4
