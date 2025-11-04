@@ -31,4 +31,4 @@ runs:
     - name: Generate diagrams
       shell: bash
       working-directory: ${{ inputs.working-directory }}
-      run: java -jar /tmp/plantuml.jar -tpng {{ inputs.files }} -v
+      run: java -jar /tmp/plantuml.jar -tpng ${{ inputs.files }} -v

@@ -17,17 +17,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate Referat
-        uses: ./.github/actions/xelatex
-        with:
-          file: referat.tex
-          working-directory: ./protege
-
       - name: Generate UML Diagrams
         uses: ./.github/actions/plantuml
         with:
           files: ./*.puml
           working-directory: ./protege/analyza
+
+      - name: Generate Referat
+        uses: ./.github/actions/xelatex
+        with:
+          file: referat.tex
+          working-directory: ./protege
 
       - name: Generate Artifact
         uses: actions/upload-artifact@v4
