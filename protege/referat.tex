@@ -76,15 +76,21 @@ Pro vývoj ontologie byla vybrána \textit{Metoda 101} dle \cite{noy2001ontology
 , která je iterativním postupem pro vývoj ontologií . V rámci jednotlivých kroků byla vymezena doména, stanoveny hlavní důležité termíny, hierarchie tříd, vlastnosti, charakteristiky a nakonec byly vytvořeny instance a vztahy mezi nimi.
 Takto vytvořený systém byl následně zadán do softwaru pro modelování ontologií Protége, který je výsledkem této práce.
 Jmenné konvence jsou použity dle \cite{noy2001ontology} a jsou jednotné v rámci projektu. 
+
 \section{Tvorba ontologie}
 \subsection{Doména a rozsah záběru}
-Démenou projektu jsou knihy a literatura. V rámci rozsahu byla tato doména omezena zejména na knihy a k nim vzahující se termíny. Doména knih byla dále omezena pouze na epiku, lyrická díla ani divadelní hry nebyly brány v úvahu.
+Démenou projektu jsou knihy a literatura. V rámci rozsahu byla tato doména omezena zejména na knihy a k nim vzahující se termíny. Doména knih byla dále omezena pouze na epiku, lyrická díla ani divadelní hry nebyly brány v úvahu. Kromě samotných knih do domény uvažujeme rovněž lidi, kteří s knihami běžně interagují. Tyto interakce jsou rovněž podrobeny zkoumání a relevantní interakce budou do projektu zahrnuty.
 
 \subsection{Existující ontologie}
 Vámci metodiky 101, byl vynechán krok zvážení existujících ontologií, vzhledem k rozsahu a zadání práce není možné žádnou ontologii převzít a cílem je vytvořit projekt nový. 
 
 \subsection{Důležité termíny}
 Mezi důležité termíny patří bezpochyby knihy. Hlavním termínem, který se ke knihám vztahuje byl určen člověk. Kromě člověka byly ke knihám stanoveny subsidiární termíny jazyk, autor, čtenář a formát. Tyto termíny se dále stanou vstupem pro definování tříd a jejich hierarchie, kde budou doplněny a dále strukturovány.
+
+Celá ontologie by se tedy měla zaměřovat na knihy a člověka. Důležité je, v jaké formě se knihy k lidem dostávají, jak nejčastěji lidé interagují s knihami a jaké ostatní termíny dokáží vhodně popsat vztah knih a člověka.
+
+Základní schopnost, zda člověk je schopen smysluplně 
+
 
 \subsection{Třídy a jejich hierarchie}
 Hierarchie tříd je základem každé znalostní ontologie. Pro výběr konkrétních tříd bylo přihlédnuto ke stanoveným důležitým termínům a ke zvolenému rozsahu domény. Mezi třídy byly stanoveny:
@@ -101,6 +107,7 @@ Hierarchie tříd je základem každé znalostní ontologie. Pro výběr konkré
     \item žánr
 \end{itemize}
 Jak je z třídní hierarchie patrné, pojmy autor a čtenář byly pro zachování korektnosti sloučeny pod entitu člověk a zmíněné důležité termíny byly doplněny o další vedlejší pojmy.
+Jako jeden z hlavních prostředníků mezi člověkem a knihou je vybrána knihovna, kterou je myšleno médium, které je schopné poskytnout člověku knihu. Knihy se běžně vyskytují v různých formátech, tyto určují základní typ interakce mezi člověkem a danou knihou, jedná se tedy o jednu z vedlejších, avšak stále důležitých tříd. 
 
 \subsection{Objektové vlastnosti}
 V rámci objektových vlastnosti bylo vymezeno deset sloves, které formulují důležité vzahy mezi jednotlivými entitami v rámci domény. Mezi ně patří:
