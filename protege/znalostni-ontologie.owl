@@ -164,6 +164,10 @@
         <Class IRI="#Audiokniha"/>
         <ObjectIntersectionOf>
             <Class IRI="#Kniha"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#jeVJazyce"/>
+                <Class IRI="#Jazyk"/>
+            </ObjectSomeValuesFrom>
             <ObjectHasValue>
                 <ObjectProperty IRI="#máFormát"/>
                 <NamedIndividual IRI="#AudioFormát"/>
