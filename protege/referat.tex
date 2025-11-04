@@ -75,7 +75,8 @@ V rámci vývoje ontologie byl použit systém \textit{Metoda 101}, který je it
 Pro vývoj ontologie byla vybrána \textit{Metoda 101} %todo přidat citaci
 , která je iterativním postupem pro vývoj ontologií . V rámci jednotlivých kroků byla vymezena doména, stanoveny hlavní důležité termíny, hierarchie tříd, vlastnosti, charakteristiky a nakonec byly vytvořeny instance a vztahy mezi nimi.
 Takto vytvořený systém byl následně zadán do softwaru pro modelování ontologií Protége, který je výsledkem této práce.
-
+%přidat citaci
+Jmenné konvence jsou použity dle a jsou jednotné v rámci projektu.
 \section{Tvorba ontologie}
 \subsection{Doména a rozsah záběru}
 Démenou projektu jsou knihy a literatura. V rámci rozsahu byla tato doména omezena zejména na knihy a k nim vzahující se termíny. Doména knih byla dále omezena pouze na epiku, lyrická díla ani divadelní hry nebyly brány v úvahu.
@@ -86,6 +87,29 @@ Vámci metodiky 101, byl vynechán krok zvážení existujících ontologií, vz
 \subsection{Důležité termíny}
 Mezi důležité termíny patří bezpochyby knihy. Hlavním termínem, který se ke knihám vztahuje byl určen člověk. Kromě člověka byly ke knihám stanoveny subsidiární termíny jazyk, autor, čtenář a formát. Tyto termíny se dále stanou vstupem pro definování tříd a jejich hierarchie, kde budou doplněny a dále strukturovány.
 
+\subsection{Třídy a jejich hierarchie}
+Hierarchie tříd je základem každé znalostní ontologie. Pro výběr konkrétních tříd bylo přihlédnuto ke stanoveným důležitým termínům a ke zvolenému rozsahu domény. Mezi třídy byly stanoveny:
+\begin{itemize}
+    \item edice
+    \item formát
+    \item jazyk
+    \item kniha (audiokniha, e-kniha, tištěná kniha)
+    \item knihovna (databáze audioknih, e-shop, kamenná prodejna)
+    \item období vydání
+    \item osoba (autor, čtenář)
+    \item série
+    \item vydavatelství
+    \item žánr
+\end{itemize}
+Jak je z třídní hierarchie patrné, pojmy autor a čtenář byly pro zachování korektnosti sloučeny pod entitu člověk a zmíněné důležité termíny byly doplněny o další vedlejší pojmy.
+
+\subsection{Objektové vlastnosti}
+V rámci objektových vlastnosti bylo vymezeno deset sloves, které formulují důležité vzahy mezi jednotlivými entitami v rámci domény. Mezi ně patří:
+\begin{itemize}
+    \item kniha \textbf{je dostupná} v knihovně
+    \item kniha \textbf{je součást} knihovny
+    \item kniha \textbf{}
+\end{itemize}
 
 \subsection{Sekce o tom}
 \label{subsec:uvod-o-tom}
