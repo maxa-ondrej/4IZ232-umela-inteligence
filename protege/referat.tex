@@ -50,39 +50,40 @@
 \thispagestyle{empty}
 \begin {center}
 	\vspace *{10mm}
-	{\Huge \sffamily \bfseries Výstižný titulek práce}
+	{\Huge \sffamily \bfseries Znalostní ontologie z oboru knih}
 
 	\vspace *{20mm}
-	{\Large \sffamily \bfseries Nějaký autor}
+	{\Large \sffamily \bfseries Ondřej Maxa, Jakub Vojtko, Jakub Vítovec}
 
 	\vspace *{7.5mm}
-	{\large \sffamily Nějaký datum}
+	{\large \sffamily \today}
 \end {center}
 
 \begin{abstract}
-	Abstrakt Text informativního abstraktu max. 200 slov, np.:
-	Technologie X je to a ono, používá se tam a tam. Experiment takový a takový přinesl tyto výsledky.
+    Tato semestrální práce se zabývá analýzou, návrhem, implementací a kritickou analýzou znalostní ontologie zaměřené na obor literatury. Dle metody 101 pro tvorbu ontologií byla vytvořena komplexní ontologie, zabírající 
+    zmíněný obor a následně tato byla implementována v open-source frameworku Protége. Výsledkem je logický systém obsahující důležité třídy, vlastnosti, vztahy a charakteristiky, který je schopný klasifikovat nové instance. 
 \end{abstract}
 
 \setlength{\parskip}{1ex plus 0.25ex minus 0.125ex}
   
 \section{Úvod}
 \label{sec:uvod}
+Obor literatury je široký a komplikovaný, tato semestrální práce má za cíl jej dekomponovat do logických struktur a zpracovat ho do formy znalostní ontologie. Daná ontologie je nejprve modelována a následně zpracována v systému Progége. Výsledná ontologie má za cíl pokrývat vymezenou podmožinu  oboru literatury v souladu s omezeným záběrem této práce. 
+V rámci vývoje ontologie byl použit systém \textit{Metoda 101}, který je iterativním procesem pro tvorbu znalostních ontologií.
 
-Text úvodu. Mělo by tu být zhruba:
-\begin{itemize}
-	\item Stručná charakteristika použitých AI technik.
-	\item Stručná charakteristika řešené/modelované domény.
-	\item Cílem této sekce je vysvětlit základy toho, s čím pracujete, a nasměrovat čtenáře na vhodnou literaturu s detaily.
-\end{itemize}
+\section{Metodika}
+Pro vývoj ontologie byla vybrána \textit{Metoda 101} %todo přidat citaci
+, která je iterativním postupem pro vývoj ontologií . V rámci jednotlivých kroků byla vymezena doména, stanoveny hlavní důležité termíny, hierarchie tříd, vlastnosti, charakteristiky a nakonec byly vytvořeny instance a vztahy mezi nimi.
 
-Celkový rozsah tohoto dokumentu je cca 1200 slov (bez příloh).
+\section{Tvorba ontologie}
+\subsection{Doména a rozsah záběru}
+Démenou projektu jsou knihy a literatura. V rámci rozsahu byla tato doména omezena zejména na knihy a k nim vzahující se entity. V úvahu nebyly brány jiné formy literárního díla, jako jsou např. divadelní hry.
 
-Pro PDF výstup: \verb|xelatex soubor.tex|.
+\subsection{Existující ontologie}
+Vámci metodiky 101, byl vynechán krok zvážení existujících ontologií, vzhledem k rozsahu a zadání práce není možné žádnou ontologii převzít a cílem je vytvořit projekt nový. 
 
-Struktura dokumentu je podle formátu \href{https://projects.ncsu.edu/eslglobe/nmswishe/IMRAD\%20Handout.pdf}{IMRAD}.
 
-Je-li sekce dále členěná, měl by tu být ,,obsahový odstavec``: V sekci \ref{subsec:uvod-o-tom} popíšu to, v sekci \ref{subsec:uvod-o-onom} zas ono.
+
 
 \subsection{Sekce o tom}
 \label{subsec:uvod-o-tom}
