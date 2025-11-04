@@ -18,18 +18,25 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate Referat
-        uses: ./.github/actions/generate
+        uses: ./.github/actions/xelatex
         with:
           file: referat.tex
           working-directory: ./protege
+
+      - name: Generate UML Diagrams
+        uses: ./.github/actions/plantuml
+        with:
+          files: ./*.puml
+          working-directory: ./protege/analyza
 
       - name: Generate Artifact
         uses: actions/upload-artifact@v4
         with:
           name: protege
           path: |
-            protege/analyza/
-            protege/*.txt
-            protege/*.pdf
-            protege/*.owl
-            protege/*.rdf
+            protege/**/*.png
+            protege/**/*.jpg
+            protege/**/*.txt
+            protege/**/*.pdf
+            protege/**/*.owl
+            protege/**/*.rdf
