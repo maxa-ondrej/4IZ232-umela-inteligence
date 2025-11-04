@@ -68,6 +68,9 @@
         <Class IRI="#Žánr"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#dostupnéV"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#jeSoučástíKnihovny"/>
     </Declaration>
     <Declaration>
@@ -89,6 +92,9 @@
         <ObjectProperty IRI="#napsalKnihu"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#prodáváFormát"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#vydaloKnihu"/>
     </Declaration>
     <Declaration>
@@ -99,6 +105,15 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hodnocení"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isbn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#název"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#početStran"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#rokVydání"/>
@@ -142,6 +157,9 @@
     <Declaration>
         <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
     </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="#Audiokniha"/>
         <ObjectIntersectionOf>
@@ -156,6 +174,12 @@
         <Class IRI="#Autor"/>
         <ObjectIntersectionOf>
             <Class IRI="#Osoba"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#čteKnihu"/>
+                    <Class IRI="#Kniha"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#napsalKnihu"/>
                 <Class IRI="#Kniha"/>
@@ -163,14 +187,58 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Databáze_audioknih"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Knihovna"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#máFormát"/>
+                <NamedIndividual IRI="#AudioFormát"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#E-kniha"/>
         <ObjectIntersectionOf>
             <Class IRI="#Kniha"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#jeVJazyce"/>
+                <Class IRI="#Jazyk"/>
+            </ObjectSomeValuesFrom>
             <ObjectHasValue>
                 <ObjectProperty IRI="#máFormát"/>
                 <NamedIndividual IRI="#ElektronickýFormát"/>
             </ObjectHasValue>
         </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#E-shop"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Knihovna"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#máFormát"/>
+                <NamedIndividual IRI="#ElektronickýFormát"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Edice"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Edice"/>
+            <ObjectSomeValuesFrom>
+                <ObjectInverseOf>
+                    <ObjectProperty IRI="#vydaloKnihu"/>
+                </ObjectInverseOf>
+                <Class IRI="#Vydavatelství"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Formát"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#AudioFormát"/>
+            <NamedIndividual IRI="#ElektronickýFormát"/>
+            <NamedIndividual IRI="#TištěnýFormát"/>
+        </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Jazyk"/>
@@ -180,9 +248,25 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Kamenná_prodejna"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Knihovna"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#máFormát"/>
+                <NamedIndividual IRI="#TištěnýFormát"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Tištěná_kniha"/>
         <ObjectIntersectionOf>
             <Class IRI="#Kniha"/>
+            <ObjectSomeValuesFrom>
+                <ObjectInverseOf>
+                    <ObjectProperty IRI="#napsalKnihu"/>
+                </ObjectInverseOf>
+                <Class IRI="#Autor"/>
+            </ObjectSomeValuesFrom>
             <ObjectHasValue>
                 <ObjectProperty IRI="#máFormát"/>
                 <NamedIndividual IRI="#TištěnýFormát"/>
@@ -193,6 +277,12 @@
         <Class IRI="#Čtenář"/>
         <ObjectIntersectionOf>
             <Class IRI="#Osoba"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#napsalKnihu"/>
+                    <Class IRI="#Kniha"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#čteKnihu"/>
                 <Class IRI="#Kniha"/>
@@ -202,6 +292,26 @@
     <SubClassOf>
         <Class IRI="#Audiokniha"/>
         <Class IRI="#Kniha"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audiokniha"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Kniha"/>
+            <ObjectSomeValuesFrom>
+                <ObjectInverseOf>
+                    <ObjectProperty IRI="#napsalKnihu"/>
+                </ObjectInverseOf>
+                <Class IRI="#Autor"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#máFormát"/>
+                <NamedIndividual IRI="#AudioFormát"/>
+            </ObjectHasValue>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#délka"/>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Autor"/>
@@ -240,7 +350,6 @@
         <Class IRI="#Edice"/>
         <Class IRI="#Formát"/>
         <Class IRI="#Jazyk"/>
-        <Class IRI="#Kniha"/>
         <Class IRI="#Knihovna"/>
         <Class IRI="#Období_vydání"/>
         <Class IRI="#Osoba"/>
@@ -249,7 +358,7 @@
         <Class IRI="#Žánr"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Edice"/>
+        <Class IRI="#Formát"/>
         <Class IRI="#Jazyk"/>
         <Class IRI="#Kniha"/>
         <Class IRI="#Knihovna"/>
@@ -318,6 +427,11 @@
         <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
         <NamedIndividual IRI="#Čeština"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#máFormát"/>
+        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+        <NamedIndividual IRI="#TištěnýFormát"/>
+    </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#jeSoučástíKnihovny"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -343,6 +457,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#prodáváFormát"/>
+        <ObjectProperty IRI="#dostupnéV"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#vydaloKnihu"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -350,6 +468,10 @@
         <ObjectProperty IRI="#čteKnihu"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#dostupnéV"/>
+        <Class IRI="#Knihovna"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#jeSoučástíKnihovny"/>
         <Class IRI="#Kniha"/>
@@ -364,10 +486,6 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#máEdici"/>
-        <Class IRI="#Kniha"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#máFormát"/>
         <Class IRI="#Kniha"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -379,6 +497,10 @@
         <Class IRI="#Autor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#prodáváFormát"/>
+        <Class IRI="#Knihovna"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#vydaloKnihu"/>
         <Class IRI="#Vydavatelství"/>
     </ObjectPropertyDomain>
@@ -386,6 +508,10 @@
         <ObjectProperty IRI="#čteKnihu"/>
         <Class IRI="#Čtenář"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#dostupnéV"/>
+        <Class IRI="#Kniha"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#jeSoučástíKnihovny"/>
         <Class IRI="#Knihovna"/>
@@ -415,6 +541,10 @@
         <Class IRI="#Kniha"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#prodáváFormát"/>
+        <Class IRI="#Formát"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#vydaloKnihu"/>
         <Class IRI="#Kniha"/>
     </ObjectPropertyRange>
@@ -428,6 +558,18 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hodnocení"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#isbn"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#název"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#početStran"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -451,6 +593,18 @@
         <Class IRI="#Kniha"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#isbn"/>
+        <Class IRI="#Edice"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#název"/>
+        <Class IRI="#Kniha"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#početStran"/>
+        <Class IRI="#Tištěná_kniha"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#rokVydání"/>
         <Class IRI="#Kniha"/>
     </DataPropertyDomain>
@@ -462,6 +616,78 @@
         <DataProperty IRI="#věk"/>
         <Class IRI="#Osoba"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#délka"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hodnocení"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isbn"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#název"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#početStran"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#rokVydání"/>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#velikost"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#věk"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#délka</IRI>
+        <Literal>&quot;délka&quot;@cs , &quot;duration&quot;@en</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hodnocení</IRI>
+        <Literal>&quot;hodnocení&quot;@cs , &quot;rating&quot;@en</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isbn</IRI>
+        <Literal>&quot;ISBN&quot;@cs , &quot;ISBN&quot;@en</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#název</IRI>
+        <Literal>&quot;název&quot;@cs , &quot;title&quot;@en</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#početStran</IRI>
+        <Literal>&quot;počet stran&quot;@cs , &quot;page count&quot;@en</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rokVydání</IRI>
+        <Literal>&quot;rok vydání&quot;@cs , &quot;year of release&quot;@en</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#velikost</IRI>
+        <Literal>&quot;velikost&quot;@cs , &quot;size&quot;@en</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#věk</IRI>
+        <Literal>&quot;věk&quot;@cs , &quot;age&quot;@en</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
