@@ -262,6 +262,10 @@
         <ObjectIntersectionOf>
             <Class IRI="#Kniha"/>
             <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#jeVJazyce"/>
+                <Class IRI="#Jazyk"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
                 <ObjectInverseOf>
                     <ObjectProperty IRI="#napsalKnihu"/>
                 </ObjectInverseOf>
