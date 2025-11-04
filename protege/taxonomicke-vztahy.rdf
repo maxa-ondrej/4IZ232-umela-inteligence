@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy/"
+     xml:base="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:knihy="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#jeSoučástíKnihovny -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#jeSoučástíKnihovny">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihovna"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#jeSoučástíSérie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#jeSoučástíSérie">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Série"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#jeVJazyce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#jeVJazyce">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Jazyk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#máEdici -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#máEdici">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Edice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#máFormát -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#máFormát">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Formát"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#máŽánr -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#máŽánr">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Žánr"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#napsalKnihu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#napsalKnihu">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Autor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#vydaloKnihu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#vydaloKnihu">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Vydavatelství"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#čteKnihu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#čteKnihu">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Čtenář"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#délka -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#délka">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Audiokniha"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#hodnocení -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#hodnocení">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#rokVydání -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#rokVydání">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#velikost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#velikost">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#E-kniha"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#věk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#věk">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Audiokniha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Audiokniha">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#AudioFormát"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Autor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Autor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#napsalKnihu"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Databáze_audioknih -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Databáze_audioknih">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihovna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#E-kniha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#E-kniha">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#ElektronickýFormát"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#E-shop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#E-shop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihovna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Edice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Edice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Formát -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Formát"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Jazyk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Jazyk">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Angličtina"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Čeština"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kamenná_prodejna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kamenná_prodejna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihovna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihovna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihovna"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Období_vydání -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Období_vydání"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Série -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Série"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Tištěná_kniha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Tištěná_kniha">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#TištěnýFormát"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Vydavatelství -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Vydavatelství"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Čtenář -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Čtenář">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#čteKnihu"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Žánr -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Žánr"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Andrzej_Sapkowski -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Andrzej_Sapkowski">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba"/>
+        <knihy:napsalKnihu rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Angličtina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Angličtina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Jazyk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#AudioFormát -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#AudioFormát">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Formát"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#ElektronickýFormát -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#ElektronickýFormát">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Formát"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Fantasy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Fantasy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Žánr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#PetrMetr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#PetrMetr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba"/>
+        <knihy:čteKnihu rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Romantika -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Romantika">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Žánr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Sci-fi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Sci-fi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Žánr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#TištěnýFormát -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#TištěnýFormát">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Formát"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Čeština -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Čeština">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Jazyk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Tištěná_kniha"/>
+        <knihy:jeVJazyce rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Čeština"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Audiokniha"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#E-kniha"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Tištěná_kniha"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Edice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Formát"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Jazyk"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihovna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Období_vydání"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Série"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Vydavatelství"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Žánr"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Edice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Jazyk"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihovna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Období_vydání"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Osoba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Série"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Vydavatelství"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Žánr"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
