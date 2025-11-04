@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy">
+    <Prefix name="" IRI="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="knihy" IRI="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#"/>
+    <Declaration>
+        <Class IRI="#Audiokniha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Autor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Databáze_audioknih"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#E-kniha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#E-shop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Edice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Formát"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Jazyk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kamenná_prodejna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kniha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Knihovna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Období_vydání"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Osoba"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Série"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tištěná_kniha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vydavatelství"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Čtenář"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Žánr"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#jeSoučástíKnihovny"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#jeSoučástíSérie"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#jeVJazyce"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#máEdici"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#máFormát"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#máŽánr"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#napsalKnihu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#vydaloKnihu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#čteKnihu"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#délka"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hodnocení"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#rokVydání"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#velikost"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#věk"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Andrzej_Sapkowski"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Angličtina"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AudioFormát"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ElektronickýFormát"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fantasy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PetrMetr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Romantika"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sci-fi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TištěnýFormát"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Čeština"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Audiokniha"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Kniha"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#máFormát"/>
+                <NamedIndividual IRI="#AudioFormát"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Autor"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Osoba"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#napsalKnihu"/>
+                <Class IRI="#Kniha"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#E-kniha"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Kniha"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#máFormát"/>
+                <NamedIndividual IRI="#ElektronickýFormát"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Jazyk"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Angličtina"/>
+            <NamedIndividual IRI="#Čeština"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Tištěná_kniha"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Kniha"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#máFormát"/>
+                <NamedIndividual IRI="#TištěnýFormát"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Čtenář"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Osoba"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#čteKnihu"/>
+                <Class IRI="#Kniha"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Audiokniha"/>
+        <Class IRI="#Kniha"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Autor"/>
+        <Class IRI="#Osoba"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Databáze_audioknih"/>
+        <Class IRI="#Knihovna"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#E-kniha"/>
+        <Class IRI="#Kniha"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#E-shop"/>
+        <Class IRI="#Knihovna"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kamenná_prodejna"/>
+        <Class IRI="#Knihovna"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tištěná_kniha"/>
+        <Class IRI="#Kniha"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Čtenář"/>
+        <Class IRI="#Osoba"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Audiokniha"/>
+        <Class IRI="#E-kniha"/>
+        <Class IRI="#Tištěná_kniha"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Edice"/>
+        <Class IRI="#Formát"/>
+        <Class IRI="#Jazyk"/>
+        <Class IRI="#Kniha"/>
+        <Class IRI="#Knihovna"/>
+        <Class IRI="#Období_vydání"/>
+        <Class IRI="#Osoba"/>
+        <Class IRI="#Série"/>
+        <Class IRI="#Vydavatelství"/>
+        <Class IRI="#Žánr"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Edice"/>
+        <Class IRI="#Jazyk"/>
+        <Class IRI="#Kniha"/>
+        <Class IRI="#Knihovna"/>
+        <Class IRI="#Období_vydání"/>
+        <Class IRI="#Osoba"/>
+        <Class IRI="#Série"/>
+        <Class IRI="#Vydavatelství"/>
+        <Class IRI="#Žánr"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Osoba"/>
+        <NamedIndividual IRI="#Andrzej_Sapkowski"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Jazyk"/>
+        <NamedIndividual IRI="#Angličtina"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Formát"/>
+        <NamedIndividual IRI="#AudioFormát"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Formát"/>
+        <NamedIndividual IRI="#ElektronickýFormát"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Žánr"/>
+        <NamedIndividual IRI="#Fantasy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Osoba"/>
+        <NamedIndividual IRI="#PetrMetr"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Žánr"/>
+        <NamedIndividual IRI="#Romantika"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Žánr"/>
+        <NamedIndividual IRI="#Sci-fi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Formát"/>
+        <NamedIndividual IRI="#TištěnýFormát"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Jazyk"/>
+        <NamedIndividual IRI="#Čeština"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tištěná_kniha"/>
+        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#napsalKnihu"/>
+        <NamedIndividual IRI="#Andrzej_Sapkowski"/>
+        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#čteKnihu"/>
+        <NamedIndividual IRI="#PetrMetr"/>
+        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jeVJazyce"/>
+        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+        <NamedIndividual IRI="#Čeština"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#jeSoučástíKnihovny"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#jeSoučástíSérie"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#jeVJazyce"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#máEdici"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#máŽánr"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#napsalKnihu"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#vydaloKnihu"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#čteKnihu"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#jeSoučástíKnihovny"/>
+        <Class IRI="#Kniha"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#jeSoučástíSérie"/>
+        <Class IRI="#Kniha"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#jeVJazyce"/>
+        <Class IRI="#Kniha"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#máEdici"/>
+        <Class IRI="#Kniha"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#máFormát"/>
+        <Class IRI="#Kniha"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#máŽánr"/>
+        <Class IRI="#Kniha"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#napsalKnihu"/>
+        <Class IRI="#Autor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#vydaloKnihu"/>
+        <Class IRI="#Vydavatelství"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#čteKnihu"/>
+        <Class IRI="#Čtenář"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#jeSoučástíKnihovny"/>
+        <Class IRI="#Knihovna"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#jeSoučástíSérie"/>
+        <Class IRI="#Série"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#jeVJazyce"/>
+        <Class IRI="#Jazyk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#máEdici"/>
+        <Class IRI="#Edice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#máFormát"/>
+        <Class IRI="#Formát"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#máŽánr"/>
+        <Class IRI="#Žánr"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#napsalKnihu"/>
+        <Class IRI="#Kniha"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#vydaloKnihu"/>
+        <Class IRI="#Kniha"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#čteKnihu"/>
+        <Class IRI="#Kniha"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#délka"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hodnocení"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#rokVydání"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#velikost"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#věk"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#délka"/>
+        <Class IRI="#Audiokniha"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hodnocení"/>
+        <Class IRI="#Kniha"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#rokVydání"/>
+        <Class IRI="#Kniha"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#velikost"/>
+        <Class IRI="#E-kniha"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#věk"/>
+        <Class IRI="#Osoba"/>
+    </DataPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
