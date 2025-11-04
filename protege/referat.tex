@@ -60,8 +60,8 @@
 \end {center}
 
 \begin{abstract}
-    Tato semestrální práce se zabývá analýzou, návrhem, implementací a kritickou analýzou znalostní ontologie zaměřené na obor literatury. Dle metody 101 pro tvorbu ontologií byla vytvořena komplexní ontologie, zabírající 
-    zmíněný obor a následně tato byla implementována v open-source frameworku Protége. Výsledkem je logický systém obsahující důležité třídy, vlastnosti, vztahy a charakteristiky, který je schopný klasifikovat nové instance. 
+    Tato semestrální práce se zabývá analýzou, návrhem, implementací a kritickou analýzou znalostní ontologie zaměřené na obor literatury. Dle metody 101 pro tvorbu ontologií byla vytvořena základní ontologie, zabírající 
+    zmíněný obor a následně tato byla implementována v open-source frameworku Protége. Výsledkem je logický systém obsahující důležité třídy, vlastnosti, vztahy a charakteristiky, který je schopný klasifikovat nové instance. K
 \end{abstract}
 
 \setlength{\parskip}{1ex plus 0.25ex minus 0.125ex}
@@ -72,11 +72,10 @@ Obor literatury je široký a komplikovaný, tato semestrální práce má za c�
 V rámci vývoje ontologie byl použit systém \textit{Metoda 101}, který je iterativním procesem pro tvorbu znalostních ontologií.
 
 \section{Metodika}
-Pro vývoj ontologie byla vybrána \textit{Metoda 101} %todo přidat citaci
+Pro vývoj ontologie byla vybrána \textit{Metoda 101} dle \cite{noy2001ontology}
 , která je iterativním postupem pro vývoj ontologií . V rámci jednotlivých kroků byla vymezena doména, stanoveny hlavní důležité termíny, hierarchie tříd, vlastnosti, charakteristiky a nakonec byly vytvořeny instance a vztahy mezi nimi.
 Takto vytvořený systém byl následně zadán do softwaru pro modelování ontologií Protége, který je výsledkem této práce.
-%přidat citaci
-Jmenné konvence jsou použity dle a jsou jednotné v rámci projektu.
+Jmenné konvence jsou použity dle \cite{noy2001ontology} a jsou jednotné v rámci projektu. 
 \section{Tvorba ontologie}
 \subsection{Doména a rozsah záběru}
 Démenou projektu jsou knihy a literatura. V rámci rozsahu byla tato doména omezena zejména na knihy a k nim vzahující se termíny. Doména knih byla dále omezena pouze na epiku, lyrická díla ani divadelní hry nebyly brány v úvahu.
@@ -143,55 +142,29 @@ Po zadání úplných definic je systém schopen klasifikovat nové instance, kt
 
 \section{Výsledky}
 \label{sec:vysledky}
-V rámci práce byl vytvořen systém znalostní ontologie, který 
-Text. Mělo by tu být zhruba:
+V rámci práce byl vytvořen systém znalostní ontologie, který obsahuje vymezenou doménu literatury, která se vzahuje zejména ke knihám. Systém obsahuje hierarchii tříd, vztahů, instancí a logických definic, které základním způsobem popisují tuto oblast lidského zaměření. Výstupem je zejména sestavený model, který je schopen klasifikovat nové instance na základě logických souvislostí a to především ohledně knih, jejich způsobů distribuce, autorů a čtenářů.
 
+\section{Diskuze a závěr}
+Získané výsledky ukazují, že systém je schopen klasifikovat základní instance z oboru literatury a knih. Kromě toho model přináší základní zpracování znalostní ontologie z tohoto oboru, na které je možné dále navázat v rámci případného rozšíření.
 
-\begin{itemize}
-	\item Popis výsledku (vytvořený model, chování systému, konkrétní měření experimentů), tj. co vám vyšlo, když jste provedli postup z předchozí sekce.
-	\item Je vhodné odkázat na detaily v příloze, ale neměl by tu být jen odkaz.
-	\item Cílem sekce je komunikovat čtenáři výsledek práce a umožnit mu srovnání při replikaci.
-\end{itemize}
+Práce využívá standardní přístup \textit{Metody 101} k modelování domény a zpracovává jej v moderním softwaru, který je volně dostupný.
 
+Mezi hlavní limit práce patří úvodní omezení rozsahu domény , které se silně odráží v klasifikačních schopnostech modelu. Hierarchie tříd by se dala vzhledem k širokému záběru tohoto tématu volně rozšiřovat a celé toto odvětví by vhodněji popsal model výrazně větší.
 
-
-\section{Diskuze}
-\label{sec:diskuze}
-
-Text. Mělo by tu být zhruba:
-\begin{itemize}
-	\item Komentář získaných výsledků (co znamenají?)
-	\item Zasazení výsledků do širšího kontextu (odpovídá to dalším znalostem z literatury?)
-	\item Přiznání možných limitů (co by šlo udělat lépe?)
-	\item Možnosti dalšího rozšíření.
-	\item Cílem sekce je výsledek zhodnotit a představit v kontextu.
-\end{itemize}
-
-\section{Závěr}
-\label{sec:zaver}
-
-Text závěru. Poslední sekcí také může být ,,Diskuze a závěr``.
 
 \begin{thebibliography}{11}
 \setlength{\parskip}{0ex}
 
-	\bibitem{autor-nejaka-kniha} \textsc{Autor, N.}: Nějaká kniha.
+	\bibitem{noy2001ontology}
+Noy, N. F. and McGuinness, D. L. 
+\textit{Ontology Development 101: A Guide to Creating Your First Ontology.} 
+Technical Report, Stanford Knowledge Systems Laboratory, 2001.  
+Available at: \url{https://protege.stanford.edu/publications/ontology_development/ontology101.pdf}.
 
-	\bibitem{autor-jina-kniha} \textsc{Autor, J.}: Jiná kniha.
-
-	\bibitem{autor-elektronicky} \textsc{Autor, D.}: Nějaký elektronický zdroj. \textless{}\url{https://www.nekde.xx/neco}\textgreater{}.
-
-	\bibitem{malir-obrazek-neceho} \textsc{Malíř, N.}: Obrázek něčeho.
-
-	\bibitem{selinux-by-example} \textsc{Mayer, F. -- MacMillan, L. -- Caplan, K.:} \textit{SELinux by Example: Using Security Enhanced Linux.} 1$^{st}$\,Ed. Upper Saddle River, Prentice Hall 2006. 456\,s. ISBN-10: 0-13-196369-4.
-
-	\bibitem{wiki-access-control} \textsc{Wikipedia:} \textit{Access Control} [online]. Poslední změna 2009-03-24 [cit. 2009-03-24]. Dostupný z~WWW: \textless\url{http://en.wikipedia.org/wiki/Access_Control}\textgreater.
 
 \end{thebibliography}
 
 \appendix
 \section*{Přílohy}
-
-Text příloh – typicky rozsáhlejší tabulky, obrázky, zdrojové kódy, (lze i formou externích souborů), vždy okomentované a odkázané z hlavního textu.
 
 \end{document}
