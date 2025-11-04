@@ -291,12 +291,6 @@
         <Class IRI="#Čtenář"/>
         <ObjectIntersectionOf>
             <Class IRI="#Osoba"/>
-            <ObjectComplementOf>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="#napsalKnihu"/>
-                    <Class IRI="#Kniha"/>
-                </ObjectSomeValuesFrom>
-            </ObjectComplementOf>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#čteKnihu"/>
                 <Class IRI="#Kniha"/>
