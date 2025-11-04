@@ -1,5 +1,92 @@
 @startuml
 
-title Knihy
+title Knihy - Ontologie
+    
+class "Kniha" {
+    - název: string
+    - hodnocení: decimal
+    - "rok vydaní": year
+}
+
+class "Tištěná_kniha" {
+    - "počet stran": integer
+}
+Kniha <|-- "Tištěná_kniha"
+() "Zaklínač_1:_poslední_přání"
+"Tištěná_kniha" ..> "Zaklínač_1:_poslední_přání"
+
+
+class "Audiokniha" {
+    - délka: decimal
+}
+Kniha <|-- "Audiokniha"
+
+class "E-kniha" {
+    - velikost: decimal
+}
+Kniha <|-- "E-kniha"
+
+class "Osoba" {
+    - věk: integer
+}
+
+class "Čtenář"
+Osoba <|-- "Čtenář"
+"Čtenář" --> "Kniha" : čteKnihu >
+() "PetrMetr"
+"Čtenář" ..> "PetrMetr"
+
+class "Autor"
+Osoba <|-- "Autor"
+"Autor" --> "Kniha" : napsalKnihu >
+() "Andrzej_Sapkowski"
+"Autor" ..> "Andrzej_Sapkowski"
+
+class "Edice" {
+    - ISBN: string
+}
+"Kniha" --> "Edice" : máEdici >
+
+class "Formát"
+"Kniha" --> "Formát" : máFormát >
+() "TištěnýFormát"
+"Formát" ..> "TištěnýFormát"
+() "ElektronickýFormát"
+"Formát" ..> "ElektronickýFormát"
+() "AudioFormát"
+"Formát" ..> "AudioFormát"
+
+class "Jazyk"
+"Kniha" --> "Jazyk" : jeVJazyce >
+() "Čeština"
+"Jazyk" ..> "Čeština"
+() "Angličtina"
+"Jazyk" ..> "Angličtina"
+
+class "Knihovna"
+"Knihovna" --> "Kniha" : dostupnéV >
+"Kniha" --> "Knihovna" : jeSoučástíKnihovny >
+"Knihovna" --> "Formát" : prodáváFormát >
+class "Databáze_audioknih"
+Knihovna <|-- "Databáze_audioknih"
+class "E-shop"
+Knihovna <|-- "E-shop"
+class "Kamenná_prodejna"
+Knihovna <|-- "Kamenná_prodejna"
+
+class "Žánr"
+"Kniha" --> "Žánr" : máŽánr >
+() "Fantasy"
+"Žánr" ..> "Fantasy"
+() "Sci-fi"
+"Žánr" ..> "Sci-fi"
+() "Romantika"
+"Žánr" ..> "Romantika"
+
+class "Období_vydání"
+class "Série"
+"Kniha" --> "Série" : jeSoučástíSérie >
+class "Vydavatelství"
+"Vydavatelství" --> "Kniha" : vydaloKnihu >
 
 @enduml
