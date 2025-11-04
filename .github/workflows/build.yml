@@ -9,7 +9,6 @@ jobs:
   protege:
     name: Protege
     runs-on: ubuntu-latest
-    container: majksa/plantuml:xelatex
     timeout-minutes: 15
     defaults:
       run:
