@@ -1,0 +1,33 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  protege:
+    name: Protege
+    runs-on: ubuntu-latest
+    container: majksa/plantuml:xelatex
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: ./protege
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Referat
+        run: xelatex referat.tex
+
+      - name: Generate Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: protege
+          path: |
+            protege/analyza/
+            protege/*.txt
+            protege/*.pdf
+            protege/*.owl
+            protege/*.rdf
