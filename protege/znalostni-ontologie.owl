@@ -468,6 +468,11 @@
         <NamedIndividual IRI="#Čeština"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jeVydánaVObdobí"/>
+        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+        <NamedIndividual IRI="#SoučasnáLiteratura"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#máFormát"/>
         <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
         <NamedIndividual IRI="#TištěnýFormát"/>

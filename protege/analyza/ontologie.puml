@@ -90,17 +90,13 @@ class "Žánr"
 
 class "Období_vydání"
 "Kniha" --> "Období_vydání" : jeVydánaVObdobí >
-class "90_léta"
-"Období_vydání" <|-- "90_léta"
-() "1990"
-"90_léta" ..> "1990"
-() "1991"
-"90_léta" ..> "1991"
-() "1992"
-"90_léta" ..> "1992"
-() "1993"
-"90_léta" ..> "1993"
-"Zaklínač_1:_poslední_přání" --> "1993" : jeVydánaVObdobí >
+() "Klasicismus"
+"Období_vydání" ..> "Klasicismus"
+() "Postmoderna"
+"Období_vydání" ..> "Postmoderna"
+() "SoučasnáLiteratura"
+"Období_vydání" ..> "SoučasnáLiteratura"
+"Zaklínač_1:_poslední_přání" --> "SoučasnáLiteratura" : jeVydánaVObdobí >
 
 class "Série"
 "Kniha" --> "Série" : jeSoučástíSérie >
