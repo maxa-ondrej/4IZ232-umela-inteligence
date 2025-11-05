@@ -25,6 +25,7 @@ Instance:
 Formát: Audio,Elektronický,Tištěný
 Jazyk: Angličtina,Čeština
 Žánr: Fantasy, Romantika, Sci-fi
+Období vydání: Kasicismus, Postmoderna, Současná literatura
 
 Objektové vlastnosti:
 Kniha je dostupná v Knihkupectví
