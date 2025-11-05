@@ -599,6 +599,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihy_Dobrovský_Havlíčkova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihy_Dobrovský_Havlíčkova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kamenná_prodejna"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#PetrMetr -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#PetrMetr">
@@ -644,6 +652,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání">
         <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+        <knihy:jeSoučástíKnihovny rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihy_Dobrovský_Havlíčkova"/>
         <knihy:jeVJazyce rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Čeština"/>
         <knihy:máFormát rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#TištěnýFormát"/>
     </owl:NamedIndividual>
