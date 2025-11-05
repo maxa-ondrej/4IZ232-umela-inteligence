@@ -35,12 +35,14 @@ Osoba <|-- "Čtenář"
 "Čtenář" --> "Kniha" : čteKnihu >
 () "PetrMetr"
 "Čtenář" ..> "PetrMetr"
+"PetrMetr" --> "Zaklínač_1:_poslední_přání" : čteKnihu >
 
 class "Autor"
 Osoba <|-- "Autor"
 "Autor" --> "Kniha" : napsalKnihu >
 () "Andrzej_Sapkowski"
 "Autor" ..> "Andrzej_Sapkowski"
+"Andrzej_Sapkowski" --> "Zaklínač_1:_poslední_přání" : napsalKnihu >
 
 class "Edice" {
     - ISBN: string
@@ -51,6 +53,7 @@ class "Formát"
 "Kniha" --> "Formát" : máFormát >
 () "TištěnýFormát"
 "Formát" ..> "TištěnýFormát"
+"Zaklínač_1:_poslední_přání" --> "TištěnýFormát" : máFormát >
 () "ElektronickýFormát"
 "Formát" ..> "ElektronickýFormát"
 () "AudioFormát"
@@ -60,19 +63,21 @@ class "Jazyk"
 "Kniha" --> "Jazyk" : jeVJazyce >
 () "Čeština"
 "Jazyk" ..> "Čeština"
+"Zaklínač_1:_poslední_přání" --> "Čeština" : jeVJazyce >
 () "Angličtina"
 "Jazyk" ..> "Angličtina"
 
 class "Knihovna"
-"Knihovna" --> "Kniha" : dostupnéV >
 "Kniha" --> "Knihovna" : jeSoučástíKnihovny >
-"Knihovna" --> "Formát" : prodáváFormát >
 class "Databáze_audioknih"
 Knihovna <|-- "Databáze_audioknih"
 class "E-shop"
 Knihovna <|-- "E-shop"
 class "Kamenná_prodejna"
 Knihovna <|-- "Kamenná_prodejna"
+() "Knihy_Dobrovský_Havlíčkova"
+"Knihovna" ..> "Knihy_Dobrovský_Havlíčkova"
+"Zaklínač_1:_poslední_přání" --> "Knihy_Dobrovský_Havlíčkova" : jeSoučástíKnihovny >
 
 class "Žánr"
 "Kniha" --> "Žánr" : máŽánr >
@@ -84,6 +89,19 @@ class "Žánr"
 "Žánr" ..> "Romantika"
 
 class "Období_vydání"
+"Kniha" --> "Období_vydání" : jeVydánaVObdobí >
+class "90_léta"
+"Období_vydání" <|-- "90_léta"
+() "1990"
+"90_léta" ..> "1990"
+() "1991"
+"90_léta" ..> "1991"
+() "1992"
+"90_léta" ..> "1992"
+() "1993"
+"90_léta" ..> "1993"
+"Zaklínač_1:_poslední_přání" --> "1993" : jeVydánaVObdobí >
+
 class "Série"
 "Kniha" --> "Série" : jeSoučástíSérie >
 class "Vydavatelství"
