@@ -68,9 +68,6 @@
         <Class IRI="#Žánr"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#90.léta"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#jeSoučástíKnihovny"/>
     </Declaration>
     <Declaration>
@@ -140,10 +137,16 @@
         <NamedIndividual IRI="#Fantasy"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Klasicismus"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Knihy_Dobrovský_Havlíčkova"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PetrMetr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postmoderna"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Romantika"/>
@@ -152,22 +155,13 @@
         <NamedIndividual IRI="#Sci-fi"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#SoučasnáLiteratura"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#TištěnýFormát"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Čeština"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1990"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1991"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1992"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1993"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
@@ -366,10 +360,6 @@
         <Class IRI="#Čtenář"/>
         <Class IRI="#Osoba"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#90.léta"/>
-        <Class IRI="#Období_vydání"/>
-    </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Audiokniha"/>
         <Class IRI="#E-kniha"/>
@@ -418,12 +408,20 @@
         <NamedIndividual IRI="#Fantasy"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Období_vydání"/>
+        <NamedIndividual IRI="#Klasicismus"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Kamenná_prodejna"/>
         <NamedIndividual IRI="#Knihy_Dobrovský_Havlíčkova"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Osoba"/>
         <NamedIndividual IRI="#PetrMetr"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Období_vydání"/>
+        <NamedIndividual IRI="#Postmoderna"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Žánr"/>
@@ -434,28 +432,16 @@
         <NamedIndividual IRI="#Sci-fi"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Období_vydání"/>
+        <NamedIndividual IRI="#SoučasnáLiteratura"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Formát"/>
         <NamedIndividual IRI="#TištěnýFormát"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Jazyk"/>
         <NamedIndividual IRI="#Čeština"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#90.léta"/>
-        <NamedIndividual IRI="#1990"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#90.léta"/>
-        <NamedIndividual IRI="#1991"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#90.léta"/>
-        <NamedIndividual IRI="#1992"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#90.léta"/>
-        <NamedIndividual IRI="#1993"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Kniha"/>
@@ -480,11 +466,6 @@
         <ObjectProperty IRI="#jeVJazyce"/>
         <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
         <NamedIndividual IRI="#Čeština"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#jeVydánaVObdobí"/>
-        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
-        <NamedIndividual IRI="#1993"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#máFormát"/>
