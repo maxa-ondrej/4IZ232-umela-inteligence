@@ -1,0 +1,40 @@
+Důležité termíny: knihy, člověk, jazyk, autor, čtenář, formát
+
+
+Třídy:
+Edice,
+Formát,
+Jazyk
+Kniha
+	Audiokniha
+	E-Kniha
+	Tištěná_kniha
+Knihovna
+	Databáze audioknih
+	E-shop
+	Kamenná prodejna
+Období vydání
+Osoba
+	Autor
+	Čtenář
+Série
+Vydavatelství
+Žánr
+
+Instance:
+Formát: Audio,Elektronický,Tištěný
+Jazyk: Angličtina,Čeština
+Žánr: Fantasy, Romantika, Sci-fi
+
+Objektové vlastnosti:
+Kniha je dostupná v Knihkupectví
+Kniha je součástí Knihovny
+Kniha je součástí Série
+Kniha je napsána v Jazyce
+Kniha má Edici
+Kniha má Formát
+Kniha má Žánr
+Autor napsal Knihu
+Vydavatelství vydalo Knihu
+Čtenář čte knihu
+
