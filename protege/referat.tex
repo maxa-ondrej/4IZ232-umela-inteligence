@@ -60,8 +60,8 @@
 \end {center}
 
 \begin{abstract}
-    Tato semestrální práce se zabývá analýzou, návrhem, implementací a kritickou analýzou znalostní ontologie zaměřené na obor literatury. Dle metody 101 pro tvorbu ontologií byla vytvořena základní ontologie, zabírající 
-    zmíněný obor a následně tato byla implementována v open-source frameworku Protége. Výsledkem je logický systém obsahující důležité třídy, vlastnosti, vztahy a charakteristiky, který je schopný klasifikovat nové instance. K
+    Tato semestrální práce se zabývá analýzou, návrhem, implementací a kritickou analýzou znalostní ontologie zaměřené na obor literatury. Dle Metody 101 pro tvorbu ontologií byla vytvořena základní ontologie, zabírající 
+    zmíněný obor. Hierarchie a vztahy této ontologie byly následně zachyceny v diagramu. Nakonec byl tento systém implementován v open-source frameworku Protége. Výsledkem je komplexní logická ontologie obsahující důležité třídy, vlastnosti, vztahy a charakteristiky z oboru literatury a knih a model, který zachycuje všechny tyto vlastnosti a navíc je schopen klasifikovat nové instance dle vnitřních logických vztahů. 
 \end{abstract}
 
 \setlength{\parskip}{1ex plus 0.25ex minus 0.125ex}
@@ -72,10 +72,13 @@ Obor literatury je široký a komplikovaný, tato semestrální práce má za c�
 V rámci vývoje ontologie byl použit systém \textit{Metoda 101}, který je iterativním procesem pro tvorbu znalostních ontologií.
 
 \section{Metodika}
-Pro vývoj ontologie byla vybrána \textit{Metoda 101} dle \cite{noy2001ontology}
-, která je iterativním postupem pro vývoj ontologií . V rámci jednotlivých kroků byla vymezena doména, stanoveny hlavní důležité termíny, hierarchie tříd, vlastnosti, charakteristiky a nakonec byly vytvořeny instance a vztahy mezi nimi.
-Takto vytvořený systém byl následně zadán do softwaru pro modelování ontologií Protége, který je výsledkem této práce.
-Jmenné konvence jsou použity dle \cite{noy2001ontology} a jsou jednotné v rámci projektu. 
+Pro vývoj ontologie byla vybrána Metoda 101 dle \cite{noy2001ontology}
+, která je iterativním postupem pro vývoj ontologií . V rámci jednotlivých kroků je vymezena doména, jsou stanoveny hlavní důležité termíny, hierarchie tříd, vlastnosti, charakteristiky a nakonec jsou vytvořeny instance a vztahy mezi nimi.
+
+Z tohoto výstupu je dále sestaven diagram demostrující základní třídy a vztahy mezi nimi. Cílem diagramu není vyčerpávajícím způsobem popsat celou znalostní ontologii, ale přehledně vizualizovat důležité vztahy mezi třídami a instancemi napříč vybranou doménou.
+
+Takto vytvořený systém je následně zadán do softwaru pro modelování ontologií Protége. Projekt v tomto softwaru je jedním z hlavních výstupů práce.
+Jmenné konvence jsou použity dle \cite{noy2001ontology} a z důvodu přehlednosti jsou jednotné v rámci celého projektu.
 
 \section{Tvorba ontologie}
 \subsection{Doména a rozsah záběru}
@@ -108,9 +111,9 @@ Hierarchie tříd je základem každé znalostní ontologie. Pro výběr konkré
     \item žánr
 \end{itemize}
 Jak je z třídní hierarchie patrné, pojmy autor a čtenář byly pro zachování korektnosti sloučeny pod entitu člověk a zmíněné důležité termíny byly doplněny o další vedlejší pojmy.
-Jako jeden z hlavních prostředníků mezi člověkem a knihou byla vybrána knihovna, kterou je myšleno médium, které je schopné poskytnout člověku knihu. Aby kniha mohla být vedena v rámci nějaké knihovny, musí existovat vydavatelství, které knihy de facto vytváří. 
+Jako jeden z hlavních prostředníků mezi člověkem a knihou byla vybrána knihovna, kterou je myšleno médium, které je schopné poskytnout člověku knihu. Aby kniha mohla být vedena v rámci nějaké knihovny, musí existovat vydavatelství, které knihy společně s autorem de facto vytváří. 
 Jednou z nejzákladnějších vlastností knih je jejich žánr, na základě něj se lidé často rozhodují, zda si knihu přečíst či ne, žánr rámcově specifikuje povahu dané knihy a dokonce i autoři mají typicky své žánrové preference, tudíž žánr řadíme jako nedílnou součást vztahu lidí a knihám.
-Pokud se hlouběji zaměříme na vztah člověka a knih, narazíme na pojmy jako edice, období vydání a série, ty umožňují blíže specifikovat konkrétní knihy a slouží jako podpůrné elementy, které lidém pomáhají konkretizovat konkrétní knižní výtisk. 
+Pokud se hlouběji zaměříme na vztah člověka a knih, narazíme na pojmy jako edice, období vydání a série, ty umožňují blíže specifikovat konkrétní knihy a slouží jako podpůrné elementy, které lidém pomáhají konkretizovat každý knižní výtisk. 
 
 \subsection{Objektové vlastnosti}
 V rámci objektových vlastnosti bylo vymezeno deset sloves, které formulují důležité vzahy mezi jednotlivými entitami v rámci domény. Mezi ně patří:
@@ -126,18 +129,32 @@ V rámci objektových vlastnosti bylo vymezeno deset sloves, které formulují d
     \item vydavatelství \textbf{vydalo} knihu
     \item čtenář \textbf{čte} knihu
 \end{itemize}
+Jak je z výše uvedeného seznamu patrné, byly vybrány zejména termíny, které konkretizují vlastnosti knih, to umožňuje knihy efektivně specifikovat, neboť vzahy mezi lidmi a knihami často plynou právě z konkrétní povahy knih a souvisejících lidských preferencí.
+Kromě toho byly určeny základní vlastnosti, vystihující nejčastější interakci mezi lidmi a knihami tj. autoři píší knihy a čtenáři knihy čtou.
 
 \subsection{Instance tříd}
 Mezi instance byly vybírány konkrétní objekty, které splňují vlastnosti a vztahy jim přiřazených tříd. V rámci konstrukce třídní hierarchie byly některé původně zamýšlené třídy převedeny na instance, jedná se o:
 \begin{itemize}
-    \item formát - (audio, elektronický a tištěný formát)
-    \item jazyk - (anglický a český)
-    \item žánr - (fantasy, sci-fi a romantika)
+    \item audio, elektronický a tištěný formát
+    \item anglický a český jazyk
+    \item žánr fantasy, sci-fi a romantika
 \end{itemize}
 Kromě zmíněných instací, které byly vytvořeny v rámci tvoření třídní hierarchie lze vytvářet instance nové, které model pomocí logických vztahů klasifikuje.
 
+\subsection{Diagram vzniklého systému}
+Vzniklý systém třídní hierarchie a vztahů byl nakonec zachycen a vizualizován v přehledném diagramu, který je dostupný v~\ref{pic:diagram}.
+
+\begin{centering}
+\label{pic:diagram}
+\begin{figure}[h]
+\caption{Diagram třídní hierarchie}
+\includegraphics[scale=0.2]{diagram.png}
+\end{figure}
+\end{centering}
+
+
 \subsection{Úplné definice}
-Po vytvoření hierarchie tříd a objektových vlastností a instancí, které vznikly odtrhnutím z třídní hierarchie bylo možné přistoupit k tvorbě úplných definic některých tříd.
+Po vytvoření hierarchie tříd, objektových vlastností a instancí, které vznikly odtrhnutím z třídní hierarchie bylo možné přistoupit k tvorbě úplných definic některých tříd.
 Mezi hlavní z úplných definic jsou řazeny:
 \begin{itemize}
     \item tištěná kniha je ekvivalentní knize v nějakém jazyce kterou napsal nějaký autor a má tištěný formát
@@ -147,7 +164,7 @@ Mezi hlavní z úplných definic jsou řazeny:
     \item e-shop je je ekvivalentní knihovně která má elektronický formát
 
 \end{itemize}
-Po zadání úplných definic je systém schopen klasifikovat nové instance, které logickými vzahy spadají pod nějakou třídu. Např. po vytvoření instance \textit{Zaklínač 1: Poslední prání}, která je knihou, je v jazyce čeština a má tištěný formát jí Protége reasoner přiřadí do třídy tištěná kniha.
+Po zadání úplných definic je systém schopen klasifikovat nové instance, které logickými vzahy spadají pod nějakou třídu. Např. po vytvoření instance \textit{Zaklínač 1: Poslední prání}, která je knihou, je v jazyce čeština a má tištěný formát jí Protége reasoner přiřadí do třídy tištěná kniha. Dalším příkladem může být \textit{Petr Metr}, který je osobou a čte knihu Zaklínač 1: Poslední přání, toho reasoner zařadí jako čtenáře.
   
 
 \section{Výsledky}
@@ -176,5 +193,8 @@ Available at: \url{https://protege.stanford.edu/publications/ontology_developmen
 
 \appendix
 \section*{Přílohy}
+
+
+
 
 \end{document}
