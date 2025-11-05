@@ -39,15 +39,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#dostupnéV -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#dostupnéV">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihovna"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#jeSoučástíKnihovny -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#jeSoučástíKnihovny">
@@ -74,6 +65,15 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Jazyk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#jeVydánaVObdobí -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#jeVydánaVObdobí">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Období_vydání"/>
     </owl:ObjectProperty>
     
 
@@ -112,16 +112,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Autor"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#prodáváFormát -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#prodáváFormát">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#dostupnéV"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihovna"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Formát"/>
     </owl:ObjectProperty>
     
 
@@ -460,7 +450,19 @@
 
     <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Formát"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 
@@ -554,6 +556,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#90.léta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#90.léta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Období_vydání"/>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -606,6 +616,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihy_Dobrovský_Havlíčkova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihy_Dobrovský_Havlíčkova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kamenná_prodejna"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#PetrMetr -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#PetrMetr">
@@ -647,11 +665,45 @@
     
 
 
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#1990 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#1990">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#90.léta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#1991 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#1991">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#90.léta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#1992 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#1992">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#90.léta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#1993 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#1993">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#90.léta"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání">
-        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Tištěná_kniha"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Kniha"/>
+        <knihy:jeSoučástíKnihovny rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Knihy_Dobrovský_Havlíčkova"/>
         <knihy:jeVJazyce rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#Čeština"/>
+        <knihy:jeVydánaVObdobí rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#1993"/>
         <knihy:máFormát rdf:resource="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#TištěnýFormát"/>
     </owl:NamedIndividual>
     
