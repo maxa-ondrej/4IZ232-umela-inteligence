@@ -5,12 +5,13 @@ inputs:
     description: "File to process"
     required: true
   working-directory:
-    description: "Working directory to run the command in"
+    description: "Working directory"
     required: true
     default: "."
 runs:
   using: docker
   image: ghcr.io/maxa-ondrej/4iz232-umela-inteligence:xelatex
+  env:
+    WORKING_DIR: ${{ inputs.working-directory }}
   args:
-    - -output-directory=${{ inputs.output-dir }}
     - ${{ inputs.file }}

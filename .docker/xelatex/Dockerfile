@@ -6,4 +6,8 @@ RUN apt-get install -y git texlive librsvg2-bin
 RUN apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra texlive-xetex texlive-lang-greek
 RUN rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["xelatex"]
+ENV WORKING_DIR=$PWD
+
+ENTRYPOINT [ "sh", "-c" ]
+
+CMD ["cd", "$WORKING_DIR", "&&", "xelatex"]

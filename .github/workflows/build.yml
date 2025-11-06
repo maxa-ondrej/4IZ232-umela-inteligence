@@ -15,18 +15,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            ${{ env.PROJECT }}
 
       - name: Generate UML Diagrams
         uses: ./.github/actions/plantuml
         with:
-          files: ${{ env.PROJECT }}/analyza/*.puml
-          output-dir: ${{ env.PROJECT }}/analyza
+          files: ./*.puml
+          working-directory: ${{ env.PROJECT }}/analyza
 
       - name: Generate Referat
         uses: ./.github/actions/xelatex
         with:
           file: referat.tex
-          output-dir: ${{ env.PROJECT }}
+          working-directory: ${{ env.PROJECT }}
 
       - name: Generate Artifact
         uses: actions/upload-artifact@v4

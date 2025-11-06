@@ -7,4 +7,8 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN mkdir -p /opt/plantuml/bin
 RUN wget -O /opt/plantuml/bin/plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2025.4/plantuml-1.2025.4.jar
 
-ENTRYPOINT ["java", "-jar", "/opt/plantuml/bin/plantuml.jar"]
+ENV WORKING_DIR=$PWD
+
+ENTRYPOINT [ "sh", "-c" ]
+
+CMD ["cd", "$WORKING_DIR", "&&", "java", "-jar", "/opt/plantuml/bin/plantuml.jar"]

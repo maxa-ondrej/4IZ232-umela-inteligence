@@ -4,14 +4,20 @@ inputs:
   files:
     description: "Files to process"
     required: true
-  output-dir:
-    description: "Output directory"
+  working-directory:
+    description: "Working directory"
     required: true
     default: "."
+  charset:
+    description: "Character set"
+    required: false
+    default: "UTF-8"
 runs:
   using: docker
   image: ghcr.io/maxa-ondrej/4iz232-umela-inteligence:plantuml
+  env:
+    WORKING_DIR: ${{ inputs.working-directory }}
   args:
     - -tpng
-    - --output-dir ${{ inputs.output-dir }}
+    - -charset ${{ inputs.charset }}
     - ${{ inputs.files }}
