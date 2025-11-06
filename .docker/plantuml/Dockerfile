@@ -8,6 +8,7 @@ RUN mkdir -p /opt/plantuml/bin
 RUN wget -O /opt/plantuml/bin/plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2025.4/plantuml-1.2025.4.jar
 
 COPY ./script.sh ./
+RUN chmod +x ./script.sh
 
 ENV WORKING_DIR=$PWD
 

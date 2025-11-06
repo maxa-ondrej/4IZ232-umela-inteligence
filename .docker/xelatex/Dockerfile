@@ -7,6 +7,7 @@ RUN apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-extr
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY ./script.sh ./
+RUN chmod +x ./script.sh
 
 ENV WORKING_DIR=$PWD
 
