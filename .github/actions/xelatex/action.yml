@@ -9,17 +9,8 @@ inputs:
     required: true
     default: "."
 runs:
-  using: composite
-  steps:
-    - name: "Prepare XeLaTeX"
-      shell: bash
-      env:
-        DEBIAN_FRONTEND: noninteractive
-      run: |
-        sudo apt-get update -y
-        sudo apt-get install -y git texlive librsvg2-bin
-        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra texlive-xetex texlive-lang-greek
-    - name: "Generate file with XeLaTeX"
-      shell: bash
-      working-directory: ${{ inputs.working-directory }}
-      run: xelatex ${{ inputs.file }}
+  using: docker
+  image: ghcr.io/maxa-ondrej/4iz232-umela-inteligence:xelatex
+  args:
+    - -output-directory=${{ inputs.output-dir }}
+    - ${{ inputs.file }}
