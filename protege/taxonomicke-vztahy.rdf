@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2025/10/knihy/"
-    xml:base="http://www.semanticweb.org/ontologies/2025/10/knihy/"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:xml="http://www.w3.org/XML/1998/namespace"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:knihy="http://www.semanticweb.org/ontologies/2025/10/knihy#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy" />
+     xml:base="http://www.semanticweb.org/ontologies/2025/10/knihy/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:knihy="http://www.semanticweb.org/ontologies/2025/10/knihy#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy"/>
+    
 
 
     <!-- 
@@ -18,10 +19,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
 
     <!-- http://www.w3.org/2001/XMLSchema#gYear -->
 
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear" />
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
 
 
     <!-- 
@@ -32,96 +36,104 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#jeSoučástíKnihovny -->
 
-    <owl:ObjectProperty
-        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#jeSoučástíKnihovny">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna" />
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#jeSoučástíKnihovny">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#jeSoučástíSérie -->
 
-    <owl:ObjectProperty
-        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#jeSoučástíSérie">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Série" />
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#jeSoučástíSérie">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Série"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#jeVJazyce -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#jeVJazyce">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#jeVydánaVObdobí -->
 
-    <owl:ObjectProperty
-        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#jeVydánaVObdobí">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Období_vydání" />
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#jeVydánaVObdobí">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#ObdobíVydání"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#máEdici -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#máEdici">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Edice" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Edice"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát" />
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#máŽánr -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#máŽánr">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#napsalKnihu -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#napsalKnihu">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Autor" />
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Autor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#vydaloKnihu -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#vydaloKnihu">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-        <rdfs:domain
-            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství" />
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#čteKnihu -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#čteKnihu">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Čtenář" />
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Čtenář"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- 
@@ -132,86 +144,95 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#délka -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#délka">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Audiokniha" />
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Audiokniha"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:label xml:lang="en">&quot;délka&quot;@cs , &quot;duration&quot;</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#hodnocení -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#hodnocení">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:label xml:lang="en">&quot;hodnocení&quot;@cs , &quot;rating&quot;</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#isbn -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#isbn">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Edice" />
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Edice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">&quot;ISBN&quot;@cs , &quot;ISBN&quot;</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#název -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#název">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">&quot;název&quot;@cs , &quot;title&quot;</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#početStran -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#početStran">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty" />
-        <rdfs:domain
-            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Tištěná_kniha" />
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnáKniha"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:label xml:lang="en">&quot;počet stran&quot;@cs , &quot;page count&quot;</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#rokVydání -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#rokVydání">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
         <rdfs:label xml:lang="en">&quot;rok vydání&quot;@cs , &quot;year of release&quot;</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#velikost -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#velikost">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#E-kniha" />
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#E-kniha"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:label xml:lang="en">&quot;velikost&quot;@cs , &quot;size&quot;</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#věk -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#věk">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty" />
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba" />
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:label xml:lang="en">&quot;věk&quot;@cs , &quot;age&quot;</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
     <!-- 
@@ -222,6 +243,8 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Audiokniha -->
 
@@ -229,48 +252,40 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát" />
-                        <owl:hasValue
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#AudioFormát" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#AudioFormát"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
                     <owl:Restriction>
                         <owl:onProperty>
                             <rdf:Description>
-                                <owl:inverseOf
-                                    rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#napsalKnihu" />
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#napsalKnihu"/>
                             </rdf:Description>
                         </owl:onProperty>
-                        <owl:someValuesFrom
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Autor" />
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Autor"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát" />
-                        <owl:hasValue
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#AudioFormát" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#AudioFormát"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#délka" />
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#délka"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Autor -->
@@ -279,50 +294,44 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba"/>
                     <owl:Class>
                         <owl:complementOf>
                             <owl:Restriction>
-                                <owl:onProperty
-                                    rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#čteKnihu" />
-                                <owl:someValuesFrom
-                                    rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#čteKnihu"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
                             </owl:Restriction>
                         </owl:complementOf>
                     </owl:Class>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#napsalKnihu" />
-                        <owl:someValuesFrom
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#napsalKnihu"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba" />
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba"/>
     </owl:Class>
+    
 
 
-    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Databáze_audioknih -->
+    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#DatabázeAudioknih -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Databáze_audioknih">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#DatabázeAudioknih">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna"/>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát" />
-                        <owl:hasValue
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#AudioFormát" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#AudioFormát"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna" />
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna"/>
     </owl:Class>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#E-kniha -->
@@ -331,46 +340,21 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#jeVJazyce" />
-                        <owl:someValuesFrom
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#jeVJazyce"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát" />
-                        <owl:hasValue
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#ElektronickýFormát" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#ElektronickýFormát"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
     </owl:Class>
-
-
-    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#E-shop -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#E-shop">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna" />
-                    <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát" />
-                        <owl:hasValue
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#ElektronickýFormát" />
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna" />
-    </owl:Class>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Edice -->
@@ -379,22 +363,39 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Edice" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Edice"/>
                     <owl:Restriction>
                         <owl:onProperty>
                             <rdf:Description>
-                                <owl:inverseOf
-                                    rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#vydaloKnihu" />
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#vydaloKnihu"/>
                             </rdf:Description>
                         </owl:onProperty>
-                        <owl:someValuesFrom
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství" />
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Eshop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Eshop">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#ElektronickýFormát"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna"/>
+    </owl:Class>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Formát -->
@@ -403,16 +404,14 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#AudioFormát" />
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#ElektronickýFormát" />
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#AudioFormát"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#ElektronickýFormát"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk -->
@@ -421,35 +420,32 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Angličtina" />
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Čeština" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Angličtina"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Čeština"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
+    
 
 
-    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Kamenná_prodejna -->
+    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#KamennáProdejna -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kamenná_prodejna">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#KamennáProdejna">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna"/>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát" />
-                        <owl:hasValue
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna" />
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna"/>
     </owl:Class>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha -->
@@ -458,74 +454,73 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát" />
-                        <owl:someValuesFrom
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna" />
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna"/>
+    
 
 
-    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Období_vydání -->
+    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#ObdobíVydání -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Období_vydání" />
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#ObdobíVydání"/>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba" />
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba"/>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Série -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Série" />
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Série"/>
+    
 
 
-    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Tištěná_kniha -->
+    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnáKniha -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Tištěná_kniha">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnáKniha">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
                     <owl:Restriction>
                         <owl:onProperty>
                             <rdf:Description>
-                                <owl:inverseOf
-                                    rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#napsalKnihu" />
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#napsalKnihu"/>
                             </rdf:Description>
                         </owl:onProperty>
-                        <owl:someValuesFrom
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Autor" />
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Autor"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát" />
-                        <owl:hasValue
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#máFormát"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
     </owl:Class>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství" />
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství"/>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Čtenář -->
@@ -534,34 +529,31 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description
-                        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba" />
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba"/>
                     <owl:Class>
                         <owl:complementOf>
                             <owl:Restriction>
-                                <owl:onProperty
-                                    rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#napsalKnihu" />
-                                <owl:someValuesFrom
-                                    rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#napsalKnihu"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
                             </owl:Restriction>
                         </owl:complementOf>
                     </owl:Class>
                     <owl:Restriction>
-                        <owl:onProperty
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#čteKnihu" />
-                        <owl:someValuesFrom
-                            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#čteKnihu"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba" />
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba"/>
     </owl:Class>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr" />
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr"/>
+    
 
 
     <!-- 
@@ -572,128 +564,133 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
-    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Andrzej_Sapkowski -->
 
-    <owl:NamedIndividual
-        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Andrzej_Sapkowski">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba" />
-        <knihy:napsalKnihu
-            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání" />
+    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#AndrzejSapkowski -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#AndrzejSapkowski">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba"/>
+        <knihy:napsalKnihu rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Zaklínač1:PosledníPřání"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Angličtina -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Angličtina">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk" />
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#AudioFormát -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#AudioFormát">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát" />
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#ElektronickýFormát -->
 
-    <owl:NamedIndividual
-        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#ElektronickýFormát">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát" />
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#ElektronickýFormát">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Fantasy -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Fantasy">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr" />
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Klasicismus -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Klasicismus">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Období_vydání" />
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#ObdobíVydání"/>
     </owl:NamedIndividual>
+    
 
 
-    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Knihy_Dobrovský_Havlíčkova -->
+    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#KnihyDobrovskýHavlíčkova -->
 
-    <owl:NamedIndividual
-        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihy_Dobrovský_Havlíčkova">
-        <rdf:type
-            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kamenná_prodejna" />
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#KnihyDobrovskýHavlíčkova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#KamennáProdejna"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#PetrMetr -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#PetrMetr">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba" />
-        <knihy:čteKnihu
-            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání" />
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba"/>
+        <knihy:čteKnihu rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Zaklínač1:PosledníPřání"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Postmoderna -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Postmoderna">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Období_vydání" />
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#ObdobíVydání"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Romantika -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Romantika">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr" />
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Sci-fi -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Sci-fi">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr" />
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#SoučasnáLiteratura -->
 
-    <owl:NamedIndividual
-        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#SoučasnáLiteratura">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Období_vydání" />
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#SoučasnáLiteratura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#ObdobíVydání"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát -->
 
-    <owl:NamedIndividual
-        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát" />
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Čeština -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Čeština">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk" />
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk"/>
     </owl:NamedIndividual>
+    
 
 
-    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání -->
+    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Zaklínač1:PosledníPřání -->
 
-    <owl:NamedIndividual
-        rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Zaklínač_1:_poslední_přání">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-        <knihy:jeSoučástíKnihovny
-            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihy_Dobrovský_Havlíčkova" />
-        <knihy:jeVJazyce rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Čeština" />
-        <knihy:jeVydánaVObdobí
-            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#SoučasnáLiteratura" />
-        <knihy:máFormát
-            rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát" />
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Zaklínač1:PosledníPřání">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+        <knihy:jeSoučástíKnihovny rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#KnihyDobrovskýHavlíčkova"/>
+        <knihy:jeVJazyce rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Čeština"/>
+        <knihy:jeVydánaVObdobí rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#SoučasnáLiteratura"/>
+        <knihy:máFormát rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnýFormát"/>
     </owl:NamedIndividual>
+    
 
 
     <!-- 
@@ -705,50 +702,44 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses" />
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description
-                rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Audiokniha" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#E-kniha" />
-            <rdf:Description
-                rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Tištěná_kniha" />
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Audiokniha"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#E-kniha"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#TištěnáKniha"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses" />
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Edice" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk" />
-            <rdf:Description
-                rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna" />
-            <rdf:Description
-                rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Období_vydání" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Série" />
-            <rdf:Description
-                rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr" />
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Edice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#ObdobíVydání"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Série"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses" />
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha" />
-            <rdf:Description
-                rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna" />
-            <rdf:Description
-                rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Období_vydání" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Série" />
-            <rdf:Description
-                rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství" />
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr" />
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Formát"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Jazyk"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Kniha"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Knihovna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#ObdobíVydání"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Osoba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Série"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Vydavatelství"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
 
+
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
