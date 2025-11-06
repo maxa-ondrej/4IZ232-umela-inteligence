@@ -8,12 +8,12 @@ class "Kniha" {
     - "rok vydaní": year
 }
 
-class "Tištěná_kniha" {
+class "TištěnáKniha" {
     - "počet stran": integer
 }
-Kniha <|-- "Tištěná_kniha"
-() "Zaklínač_1:_poslední_přání"
-"Tištěná_kniha" ..> "Zaklínač_1:_poslední_přání"
+Kniha <|-- "TištěnáKniha"
+() "Zaklínač1:PosledníPřání"
+"TištěnáKniha" ..> "Zaklínač1:PosledníPřání"
 
 
 class "Audiokniha" {
@@ -35,14 +35,14 @@ Osoba <|-- "Čtenář"
 "Čtenář" --> "Kniha" : čteKnihu >
 () "PetrMetr"
 "Čtenář" ..> "PetrMetr"
-"PetrMetr" --> "Zaklínač_1:_poslední_přání" : čteKnihu >
+"PetrMetr" --> "Zaklínač1:PosledníPřání" : čteKnihu >
 
 class "Autor"
 Osoba <|-- "Autor"
 "Autor" --> "Kniha" : napsalKnihu >
-() "Andrzej_Sapkowski"
-"Autor" ..> "Andrzej_Sapkowski"
-"Andrzej_Sapkowski" --> "Zaklínač_1:_poslední_přání" : napsalKnihu >
+() "AndrzejSapkowski"
+"Autor" ..> "AndrzejSapkowski"
+"AndrzejSapkowski" --> "Zaklínač1:PosledníPřání" : napsalKnihu >
 
 class "Edice" {
     - ISBN: string
@@ -53,7 +53,7 @@ class "Formát"
 "Kniha" --> "Formát" : máFormát >
 () "TištěnýFormát"
 "Formát" ..> "TištěnýFormát"
-"Zaklínač_1:_poslední_přání" --> "TištěnýFormát" : máFormát >
+"Zaklínač1:PosledníPřání" --> "TištěnýFormát" : máFormát >
 () "ElektronickýFormát"
 "Formát" ..> "ElektronickýFormát"
 () "AudioFormát"
@@ -63,21 +63,21 @@ class "Jazyk"
 "Kniha" --> "Jazyk" : jeVJazyce >
 () "Čeština"
 "Jazyk" ..> "Čeština"
-"Zaklínač_1:_poslední_přání" --> "Čeština" : jeVJazyce >
+"Zaklínač1:PosledníPřání" --> "Čeština" : jeVJazyce >
 () "Angličtina"
 "Jazyk" ..> "Angličtina"
 
 class "Knihovna"
 "Kniha" --> "Knihovna" : jeSoučástíKnihovny >
-class "Databáze_audioknih"
-Knihovna <|-- "Databáze_audioknih"
+class "DatabázeAudioknih"
+Knihovna <|-- "DatabázeAudioknih"
 class "E-shop"
 Knihovna <|-- "E-shop"
-class "Kamenná_prodejna"
-Knihovna <|-- "Kamenná_prodejna"
-() "Knihy_Dobrovský_Havlíčkova"
-"Knihovna" ..> "Knihy_Dobrovský_Havlíčkova"
-"Zaklínač_1:_poslední_přání" --> "Knihy_Dobrovský_Havlíčkova" : jeSoučástíKnihovny >
+class "KamennáProdejna"
+Knihovna <|-- "KamennáProdejna"
+() "KnihyDobrovskýHavlíčkova"
+"Knihovna" ..> "KnihyDobrovskýHavlíčkova"
+"Zaklínač1:PosledníPřání" --> "KnihyDobrovskýHavlíčkova" : jeSoučástíKnihovny >
 
 class "Žánr"
 "Kniha" --> "Žánr" : máŽánr >
@@ -88,15 +88,15 @@ class "Žánr"
 () "Romantika"
 "Žánr" ..> "Romantika"
 
-class "Období_vydání"
-"Kniha" --> "Období_vydání" : jeVydánaVObdobí >
+class "ObdobíVydání"
+"Kniha" --> "ObdobíVydání" : jeVydánaVObdobí >
 () "Klasicismus"
-"Období_vydání" ..> "Klasicismus"
+"ObdobíVydání" ..> "Klasicismus"
 () "Postmoderna"
-"Období_vydání" ..> "Postmoderna"
+"ObdobíVydání" ..> "Postmoderna"
 () "SoučasnáLiteratura"
-"Období_vydání" ..> "SoučasnáLiteratura"
-"Zaklínač_1:_poslední_přání" --> "SoučasnáLiteratura" : jeVydánaVObdobí >
+"ObdobíVydání" ..> "SoučasnáLiteratura"
+"Zaklínač1:PosledníPřání" --> "SoučasnáLiteratura" : jeVydánaVObdobí >
 
 class "Série"
 "Kniha" --> "Série" : jeSoučástíSérie >

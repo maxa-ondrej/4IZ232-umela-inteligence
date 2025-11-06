@@ -8,7 +8,7 @@ Jazyk
 Kniha
 	Audiokniha
 	E-Kniha
-	Tištěná_kniha
+	Tištěná kniha
 Knihovna
 	Databáze audioknih
 	E-shop
@@ -24,7 +24,7 @@ Vydavatelství
 Instance:
 Formát: Audio,Elektronický,Tištěný
 Jazyk: Angličtina,Čeština
-Žánr: Fantasy, Romantika, Sci-fi
+Žánr: Fantasy, Romantika, SciFi
 Období vydání: Kasicismus, Postmoderna, Současná literatura
 
 Objektové vlastnosti:
