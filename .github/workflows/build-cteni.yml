@@ -1,0 +1,34 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - cteni
+
+jobs:
+  cteni:
+    name: Cteni
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PROJECT: cteni
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github/actions
+            ${{ env.PROJECT }}
+
+      - name: Generate Referat
+        uses: ./.github/actions/xelatex
+        with:
+          file: referat.tex
+          working-directory: ${{ env.PROJECT }}
+
+      - name: Generate Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.PROJECT }}
+          path: |
+            ${{ env.PROJECT }}/*.pdf
