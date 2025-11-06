@@ -649,9 +649,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#Sci-fi -->
+    <!-- http://www.semanticweb.org/ontologies/2025/10/knihy#SciFi -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#Sci-fi">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2025/10/knihy#SciFi">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2025/10/knihy#Žánr"/>
     </owl:NamedIndividual>
     
