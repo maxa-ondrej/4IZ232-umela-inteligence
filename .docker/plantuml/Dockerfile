@@ -7,9 +7,10 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN mkdir -p /opt/plantuml/bin
 RUN wget -O /opt/plantuml/bin/plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2025.4/plantuml-1.2025.4.jar
 
-COPY ./script.sh ./
-RUN chmod +x ./script.sh
+RUN mkdir -p /app
+COPY ./script.sh ./app/
+RUN chmod +x /app/script.sh
 
 ENV WORKING_DIR=$PWD
 
-ENTRYPOINT [ "./script.sh" ]
+ENTRYPOINT [ "/app/script.sh" ]
