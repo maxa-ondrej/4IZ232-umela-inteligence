@@ -12,7 +12,7 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="knihy" IRI="http://www.semanticweb.org/cen57039/ontologies/2025/10/knihy#"/>
+    <Prefix name="knihy" IRI="http://www.semanticweb.org/ontologies/2025/10/knihy#"/>
     <Declaration>
         <Class IRI="#Audiokniha"/>
     </Declaration>
@@ -20,16 +20,16 @@
         <Class IRI="#Autor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Databáze_audioknih"/>
+        <Class IRI="#DatabázeAudioknih"/>
     </Declaration>
     <Declaration>
         <Class IRI="#E-kniha"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#E-shop"/>
+        <Class IRI="#Edice"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Edice"/>
+        <Class IRI="#Eshop"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Formát"/>
@@ -38,7 +38,7 @@
         <Class IRI="#Jazyk"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Kamenná_prodejna"/>
+        <Class IRI="#KamennáProdejna"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Kniha"/>
@@ -47,7 +47,7 @@
         <Class IRI="#Knihovna"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Období_vydání"/>
+        <Class IRI="#ObdobíVydání"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Osoba"/>
@@ -56,7 +56,7 @@
         <Class IRI="#Série"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Tištěná_kniha"/>
+        <Class IRI="#TištěnáKniha"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Vydavatelství"/>
@@ -122,7 +122,7 @@
         <DataProperty IRI="#věk"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Andrzej_Sapkowski"/>
+        <NamedIndividual IRI="#AndrzejSapkowski"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Angličtina"/>
@@ -140,7 +140,7 @@
         <NamedIndividual IRI="#Klasicismus"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Knihy_Dobrovský_Havlíčkova"/>
+        <NamedIndividual IRI="#KnihyDobrovskýHavlíčkova"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PetrMetr"/>
@@ -152,7 +152,7 @@
         <NamedIndividual IRI="#Romantika"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Sci-fi"/>
+        <NamedIndividual IRI="#SciFi"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SoučasnáLiteratura"/>
@@ -164,7 +164,7 @@
         <NamedIndividual IRI="#Čeština"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+        <NamedIndividual IRI="#Zaklínač1:PosledníPřání"/>
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:gYear"/>
@@ -196,7 +196,7 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Databáze_audioknih"/>
+        <Class IRI="#DatabázeAudioknih"/>
         <ObjectIntersectionOf>
             <Class IRI="#Knihovna"/>
             <ObjectHasValue>
@@ -220,16 +220,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#E-shop"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Knihovna"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#máFormát"/>
-                <NamedIndividual IRI="#ElektronickýFormát"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Edice"/>
         <ObjectIntersectionOf>
             <Class IRI="#Edice"/>
@@ -239,6 +229,16 @@
                 </ObjectInverseOf>
                 <Class IRI="#Vydavatelství"/>
             </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Eshop"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Knihovna"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#máFormát"/>
+                <NamedIndividual IRI="#ElektronickýFormát"/>
+            </ObjectHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -257,7 +257,7 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Kamenná_prodejna"/>
+        <Class IRI="#KamennáProdejna"/>
         <ObjectIntersectionOf>
             <Class IRI="#Knihovna"/>
             <ObjectHasValue>
@@ -277,7 +277,7 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Tištěná_kniha"/>
+        <Class IRI="#TištěnáKniha"/>
         <ObjectIntersectionOf>
             <Class IRI="#Kniha"/>
             <ObjectSomeValuesFrom>
@@ -337,7 +337,7 @@
         <Class IRI="#Osoba"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Databáze_audioknih"/>
+        <Class IRI="#DatabázeAudioknih"/>
         <Class IRI="#Knihovna"/>
     </SubClassOf>
     <SubClassOf>
@@ -345,15 +345,15 @@
         <Class IRI="#Kniha"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#E-shop"/>
+        <Class IRI="#Eshop"/>
         <Class IRI="#Knihovna"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Kamenná_prodejna"/>
+        <Class IRI="#KamennáProdejna"/>
         <Class IRI="#Knihovna"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Tištěná_kniha"/>
+        <Class IRI="#TištěnáKniha"/>
         <Class IRI="#Kniha"/>
     </SubClassOf>
     <SubClassOf>
@@ -363,14 +363,14 @@
     <DisjointClasses>
         <Class IRI="#Audiokniha"/>
         <Class IRI="#E-kniha"/>
-        <Class IRI="#Tištěná_kniha"/>
+        <Class IRI="#TištěnáKniha"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Edice"/>
         <Class IRI="#Formát"/>
         <Class IRI="#Jazyk"/>
         <Class IRI="#Knihovna"/>
-        <Class IRI="#Období_vydání"/>
+        <Class IRI="#ObdobíVydání"/>
         <Class IRI="#Osoba"/>
         <Class IRI="#Série"/>
         <Class IRI="#Vydavatelství"/>
@@ -381,7 +381,7 @@
         <Class IRI="#Jazyk"/>
         <Class IRI="#Kniha"/>
         <Class IRI="#Knihovna"/>
-        <Class IRI="#Období_vydání"/>
+        <Class IRI="#ObdobíVydání"/>
         <Class IRI="#Osoba"/>
         <Class IRI="#Série"/>
         <Class IRI="#Vydavatelství"/>
@@ -389,7 +389,7 @@
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#Osoba"/>
-        <NamedIndividual IRI="#Andrzej_Sapkowski"/>
+        <NamedIndividual IRI="#AndrzejSapkowski"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Jazyk"/>
@@ -408,19 +408,19 @@
         <NamedIndividual IRI="#Fantasy"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Období_vydání"/>
+        <Class IRI="#ObdobíVydání"/>
         <NamedIndividual IRI="#Klasicismus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Kamenná_prodejna"/>
-        <NamedIndividual IRI="#Knihy_Dobrovský_Havlíčkova"/>
+        <Class IRI="#KamennáProdejna"/>
+        <NamedIndividual IRI="#KnihyDobrovskýHavlíčkova"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Osoba"/>
         <NamedIndividual IRI="#PetrMetr"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Období_vydání"/>
+        <Class IRI="#ObdobíVydání"/>
         <NamedIndividual IRI="#Postmoderna"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -429,10 +429,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Žánr"/>
-        <NamedIndividual IRI="#Sci-fi"/>
+        <NamedIndividual IRI="#SciFi"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Období_vydání"/>
+        <Class IRI="#ObdobíVydání"/>
         <NamedIndividual IRI="#SoučasnáLiteratura"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -445,36 +445,36 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Kniha"/>
-        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+        <NamedIndividual IRI="#Zaklínač1:PosledníPřání"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#napsalKnihu"/>
-        <NamedIndividual IRI="#Andrzej_Sapkowski"/>
-        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+        <NamedIndividual IRI="#AndrzejSapkowski"/>
+        <NamedIndividual IRI="#Zaklínač1:PosledníPřání"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#čteKnihu"/>
         <NamedIndividual IRI="#PetrMetr"/>
-        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+        <NamedIndividual IRI="#Zaklínač1:PosledníPřání"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#jeSoučástíKnihovny"/>
-        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
-        <NamedIndividual IRI="#Knihy_Dobrovský_Havlíčkova"/>
+        <NamedIndividual IRI="#Zaklínač1:PosledníPřání"/>
+        <NamedIndividual IRI="#KnihyDobrovskýHavlíčkova"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#jeVJazyce"/>
-        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+        <NamedIndividual IRI="#Zaklínač1:PosledníPřání"/>
         <NamedIndividual IRI="#Čeština"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#jeVydánaVObdobí"/>
-        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+        <NamedIndividual IRI="#Zaklínač1:PosledníPřání"/>
         <NamedIndividual IRI="#SoučasnáLiteratura"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#máFormát"/>
-        <NamedIndividual IRI="#Zaklínač_1:_poslední_přání"/>
+        <NamedIndividual IRI="#Zaklínač1:PosledníPřání"/>
         <NamedIndividual IRI="#TištěnýFormát"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
@@ -559,7 +559,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#jeVydánaVObdobí"/>
-        <Class IRI="#Období_vydání"/>
+        <Class IRI="#ObdobíVydání"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#máEdici"/>
@@ -635,7 +635,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#početStran"/>
-        <Class IRI="#Tištěná_kniha"/>
+        <Class IRI="#TištěnáKniha"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#rokVydání"/>
@@ -726,4 +726,3 @@
 
 
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
-
