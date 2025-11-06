@@ -4,31 +4,14 @@ inputs:
   files:
     description: "Files to process"
     required: true
-  working-directory:
-    description: "Working directory to run the command in"
+  output-dir:
+    description: "Output directory"
     required: true
     default: "."
 runs:
-  using: composite
-  steps:
-    - name: "Prepare PlantUML"
-      shell: bash
-      env:
-        DEBIAN_FRONTEND: noninteractive
-      run: |
-        sudo apt-get update -y
-        sudo apt-get install -y git wget openjdk-17-jre graphviz librsvg2-bin
-
-    - name: Install PlantUML
-      shell: bash
-      run: |
-        wget -O /tmp/plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2025.4/plantuml-1.2025.4.jar
-
-    - name: Test dot
-      shell: bash
-      run: java -jar /tmp/plantuml.jar -testdot
-
-    - name: Generate diagrams
-      shell: bash
-      working-directory: ${{ inputs.working-directory }}
-      run: java -jar /tmp/plantuml.jar -tpng ${{ inputs.files }} -v
+  using: docker
+  image: ghcr.io/maxa-ondrej/4iz232-umela-inteligence:plantuml
+  args:
+    - -tpng
+    - --output-dir ${{ inputs.output-dir }}
+    - ${{ inputs.files }}

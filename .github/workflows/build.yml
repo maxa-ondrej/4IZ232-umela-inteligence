@@ -10,9 +10,8 @@ jobs:
     name: Protege
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    defaults:
-      run:
-        working-directory: ./protege
+    env:
+      PROJECT: protege
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,23 +19,23 @@ jobs:
       - name: Generate UML Diagrams
         uses: ./.github/actions/plantuml
         with:
-          files: ./*.puml
-          working-directory: ./protege/analyza
+          files: ${{ env.PROJECT }}/analyza/*.puml
+          output-dir: ${{ env.PROJECT }}/analyza
 
       - name: Generate Referat
         uses: ./.github/actions/xelatex
         with:
           file: referat.tex
-          working-directory: ./protege
+          working-directory: ${{ env.PROJECT }}
 
       - name: Generate Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: protege
+          name: ${{ env.PROJECT }}
           path: |
-            protege/**/*.png
-            protege/**/*.jpg
-            protege/**/*.txt
-            protege/**/*.pdf
-            protege/**/*.owl
-            protege/**/*.rdf
+            ${{ env.PROJECT }}/**/*.png
+            ${{ env.PROJECT }}/**/*.jpg
+            ${{ env.PROJECT }}/**/*.txt
+            ${{ env.PROJECT }}/**/*.pdf
+            ${{ env.PROJECT }}/**/*.owl
+            ${{ env.PROJECT }}/**/*.rdf
