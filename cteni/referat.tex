@@ -27,8 +27,8 @@
 \usepackage{hyperref}
 % Hyperref a PDF nastavení
 \hypersetup{
-    pdftitle={Titulek},    % title TODO: Vyplnit titulek
-    pdfauthor={Nějaký Autor},     % author TODO: Vyplnit autora
+    pdftitle={Analýza - Computing Machinery and Intelligence},
+    pdfauthor={Maxa Ondřej},
     colorlinks=true,       % false: boxed links; true: colored links
     linkcolor=RoyalBlue,          % color of internal links
     citecolor=RoyalBlue,        % color of links to bibliography
@@ -50,119 +50,135 @@
 \thispagestyle{empty}
 \begin {center}
 	\vspace *{10mm}
-	{\Huge \sffamily \bfseries Výstižný titulek práce}
+	{\Huge \sffamily \bfseries Analýza - Computing Machinery and Intelligence}
 
 	\vspace *{20mm}
-	{\Large \sffamily \bfseries Nějaký autor}
+	{\Large \sffamily \bfseries Maxa Ondřej}
 
 	\vspace *{7.5mm}
-	{\large \sffamily Nějaký datum}
+	{\large \sffamily 12. prosince 2025}
 \end {center}
 
 \begin{abstract}
-	Abstrakt Text informativního abstraktu max. 200 slov, np.:
-	Technologie X je to a ono, používá se tam a tam. Experiment takový a takový přinesl tyto výsledky.
+	Článek ,,Computing Machinery and Intelligence`` (1950) představuje klíčový text zakládající oblast umělé inteligence. Zabývá se filozofickou otázku jestli ,,Mohou stroje myslet?{}`` a představuje nám Turingový test (v textu se používá slovní spojení ,,imitační hra``). Hlavní postavou hry je rozhodčí, který rozlišuje mezi odpověďmi člověka a stroje na základě textové komunikace. Dnes zůstává Turingův test ikonickou metrikou a položil základy pro současnou popularitu AI.
 \end{abstract}
 
 \setlength{\parskip}{1ex plus 0.25ex minus 0.125ex}
   
-\section{Úvod}
+\section{Hlavní pojmy článku}
 \label{sec:uvod}
 
-Text úvodu. Mělo by tu být zhruba:
-\begin{itemize}
-	\item Stručná charakteristika použitých AI technik.
-	\item Stručná charakteristika řešené/modelované domény.
-	\item Cílem této sekce je vysvětlit základy toho, s čím pracujete, a nasměrovat čtenáře na vhodnou literaturu s detaily.
-\end{itemize}
+Článek definuje hned několik klíčových pojmů, na kterých staví celé své uvažování.
 
-Celkový rozsah tohoto dokumentu je cca 1200 slov (bez příloh).
+\subsection{Imitační hra}
+\label{subsec:imitacni-hra}
+Imitační hra je myšlenkový experiment, v kterém se vyskytují tři účastníci: muž (A), žena (B) a rozhodčí (C).
 
-Pro PDF výstup: \verb|xelatex soubor.tex|.
+Rozhodčí je izolován od obou hráčů a jeho úkolem je určit, kdo je muž a kdo žena na základě jejich textových odpovědí na jeho otázky. Muž se snaží přesvědčit rozhodčího, že je žena, zatímco žena se snaží pomoci rozhodčímu správně identifikovat její pohlaví.
 
-Struktura dokumentu je podle formátu \href{https://projects.ncsu.edu/eslglobe/nmswishe/IMRAD\%20Handout.pdf}{IMRAD}.
+Experiment začíná, když člověka A nahradíme strojem. Otázka, kterou článek klade, je: ,,Bude rozhodčí stejně úspěšný v identifikaci muže a ženy, když místo muže bude stroj?{}`` Pokud ano, můžeme říci, že stroj ,,myslí`` podle kritéria imitační hry.
 
-Je-li sekce dále členěná, měl by tu být ,,obsahový odstavec``: V sekci \ref{subsec:uvod-o-tom} popíšu to, v sekci \ref{subsec:uvod-o-onom} zas ono.
+\subsection{Digitální počítač a diskrétní stavový stroj}
+\label{subsec:digitani-pocitac}
+Digitální počítač Turing chápe jako stroj, který pracuje v diskrétních krocích se symboly, má paměť, řídicí jednotku a je řízen programem. Tyto stroje mohou napodobit libovolný jiný diskrétní stavový stroj, a proto se o nich říká, že jsou univerzální stroje.
 
-\subsection{Sekce o tom}
-\label{subsec:uvod-o-tom}
+\subsection{Univerzální stroj}
+\label{subsec:univerzalni-stroj}
+Univerzální stroj je takový počítač, který lze vhodným programem přimět, aby simuloval jakýkoli jiný výpočetní postup či stroj určitého typu. Znamená to, že místo stavby speciálního stroje pro každý úkol stačí mít jeden univerzální stroj a měnit jen popis úlohy, kterou má realizovat.
 
-Text.
+\subsection{Programování}
+\label{subsec:programovani}
+Programování je proces vytváření popisu úlohy pro univerzální stroj ve formě posloupnosti instrukcí. Tyto instrukce říkají univerzálnímu stroji, jak má krok za krokem pracovat se symboly v paměti.
 
-Odkazy na zdroje se po vyplnění bibliografické citace v sekci Reference vkládají do textu přes \verb|\cite{xxx}|. ,,Nějaká zajímavá myšlenka z jiné knihy`` \cite{autor-jina-kniha}. Většinou je ale práce s literaturou o vybrání důležitých myšlenek a jejich stručném shrnutí vlastními slovy. Parafráze zajímavých myšlenek z nějaké knihy, viz \cite{autor-nejaka-kniha}.
+\subsection{,,Learning machine`` a dětský stroj}
+\label{subsec:learning-machine}
+Turing zavádí pojem ,,learning machine``. Tento stroje je unikátní tím, že není pevně naprogramován od začátku, ale je to stroj, který se učí a zlepšuje své schopnosti na základě zkušeností. S tím úzce souvísí koncepce ,,dětského stroje``: nejprve vytvořit jednoduchý systém s možností učení a tento pak ,,vychovávat`` podobně jako dítě, až dosáhne dospělé úrovně inteligence. Tento přístup zdůrazňuje význam učení a adaptace v procesu vývoje umělé inteligence.
 
-\subsection{Sekce o onom}
-\label{subsec:uvod-o-onom}
+\section{Hlavní teze článku}
+\label{sec:hlavni-teze}
+Článek přináší několik hlavních tezí o strojové inteligenci a každou podpírá specifickými argumenty.
 
-Text.
- 
-\section{Metody}
-\label{sec:metody}
+\subsection{Nahradit otázku ,,mohou stroje myslet?{}`` imitační hrou}
+\label{subsec:nahradit-otazku}
+Turing navrhuje, aby se otázka ,,mohou stroje myslet?{}`` nahradila otázkou, zda digitální počítač dokáže v imitační hře jednat nerozlišitelně od člověka.
 
-Text. Mělo by tu být zhruba:
-\begin{itemize}
-	\item Popis postupu (návrh a realizace/experimenty), jak jste se dostali k výsledku z následující sekce.
-	\item Případné využití generativní AI by také mělo být zdokumentováno zde, detaily promptů v přílohách.
-	\item Cílem této sekce je umožnit čtenáři, aby provedl to, co vy a mohl si ověřit, že dojde ke stejnému/srovnatelnému výsledku.
-\end{itemize}
+Tuto tezi podporuje tím, že původní otázka je příliš vágní a filozofická, zatímco úspěch v imitační hře lze relativně jednoznačně posoudit na základě chování v konverzaci.
 
-\section{Výsledky}
-\label{sec:vysledky}
+\subsection{Do budoucna budou stroje v testu úspěšné}
+\label{sec:budoucnost}
+Turing odhaduje, že kolem roku 2000 bude možné sestrojit stroje, které v pěti minutové hře oklamou člověka zhruba ve třetině případů.
+Toto tvrzení je založeno na jeho analýze pokroku ve výpočetní technice a umělé inteligenci, který v té době pozoroval. Například program pro šachy či konverzaci, proto věří, že se rozdíl mezi strojem a člověkem bude zmenšovat.
 
-Text. Mělo by tu být zhruba:
-\begin{itemize}
-	\item Popis výsledku (vytvořený model, chování systému, konkrétní měření experimentů), tj. co vám vyšlo, když jste provedli postup z předchozí sekce.
-	\item Je vhodné odkázat na detaily v příloze, ale neměl by tu být jen odkaz.
-	\item Cílem sekce je komunikovat čtenáři výsledek práce a umožnit mu srovnání při replikaci.
-\end{itemize}
+\subsection{Učící se stroje jsou perspektivnější než pevně naprogramované}
+\label{subsec:ucici-se-stroje}
+Turing zdůrazňuje, že místo ručního programování všech schopností je účelnější konstruovat již zmiňované ,,dětské stroj``, které se učí a dále vyvíjejí.
+Tuto tezi podporuje tím, že ručně popsat všechny znalosti a strategie dospělého je prakticky nemožné. Mnohem efektivnější je vytvořit stroj se základní strukturou a učícím mechanismem a nechat ho získávat znalosti a dovednosti prostřednictvím zkušeností.
 
-Obrázky, tabulky a podobně se vkládají nejprve jako plovoucí objekt. V textu by měla být zmínka o obrázku s křížovým odkazem na jeho značku, np.: Na obrázku \ref{fig:obrazek-neceho} je schéma něčeho. Křížové odkazy lze nastavit, aby zobrazovaly i stránku, což se může u plovoucích objektů hodit.
+\section{Převratnost článku}
+\label{sec:prevratnost}
+Převratnost článku spočívá v tom, že z vágní filozofické otázky ,,mohou stroje myslet?{}`` dělá přesně formulovaný, testovatelný problém a tím fakticky zakládá moderní pojetí umělé inteligence. Turingův test se stal ikonickou metrikou pro hodnocení strojové inteligence a inspiroval nespočet výzkumů a diskuzí v oblasti AI.
 
-\begin{figure}
-	\centering
-	%\includegraphics[width=1.0\linewidth]{cesta-k-obrazku.jpg}
-	Sem se teprve vloží vlastní obrázek pomocí \verb|includegraphics|. Obvykle je potřeba nastavit nějaké rozumné rozměry, nejlépe relativně k šířce řádku a zarovnat obrázek na střed.
-	\caption{Stručný popisek obrázku – pokud je přejatý pak s odkazem \cite{malir-obrazek-neceho}.\label{fig:obrazek-neceho}}
-\end{figure}
+Turing nahrazuje nejasný pojem ,,myšlení`` chováním v imitační hře, takže inteligence se chápe jako pozorovatelné, jazykově vyjádřené schopnosti, které lze experimentálně zkoumat. Tím otevírá cestu, aby se otázkou mysli strojů zabývala informatika a kognitivní vědy, ne jen tradiční filozofie.
 
+Článek také přenáší dřívější teoretickou práci o univerzálních strojích do kontextu psychiky a ukazuje, že jeden digitální počítač může programem simulovat rozmanité ,,intelektuální`` činnosti. Myšlenka, že inteligence je realizovatelná na obecném programovatelném zařízení, se stala základem celého oboru AI i softwarového inženýrství.
 
-\section{Diskuze}
-\label{sec:diskuze}
+\section{Aktuálnost článku}
+\label{sec:aktualnost}
+I přes to, že článek vznikl v roce 1950, jeho myšlenky zůstávají relevantní i dnes. Některé myšlenky jsou dnes stále základním stavebním kamenem AI, jiné byly výrazně rozšířeny nebo překonány novějšími přístupy.
 
-Text. Mělo by tu být zhruba:
-\begin{itemize}
-	\item Komentář získaných výsledků (co znamenají?)
-	\item Zasazení výsledků do širšího kontextu (odpovídá to dalším znalostem z literatury?)
-	\item Přiznání možných limitů (co by šlo udělat lépe?)
-	\item Možnosti dalšího rozšíření.
-	\item Cílem sekce je výsledek zhodnotit a představit v kontextu.
-\end{itemize}
+\subsection{Stále relevantní myšlenky}
+\label{subsec:stale-relevantni}
+Turingův test (imitační hra) se stále používá jako významný myšlenkový experiment a inspirace pro hodnocení jazykových modelů a konverzačních systémů. I když moderní AI systémy často využívají hluboké učení a neuronové sítě, základní koncept univerzálního stroje a programovatelnosti zůstává klíčový.
+
+Koncept univerzálního digitálního počítače jako stroje, který lze programem přimět k libovolnému výpočtu, je nadále základem celé informatiky i teorie AI.
+
+Myšlenka ,,učících se strojů`` a ,,dětského stroje`` předjímá dnešní strojové učení, kdy se modely neprogramují ručně, ale trénují na datech a postupně zlepšují výkonnost.
+
+\subsection{Myšlenky, částečne nebo zcela překonány}
+\label{subsec:prekonane-myslenky}
+Turingův test už není považován za jediný nebo hlavní standard inteligence. Pro moderní systémy (např. rozpoznávání obrazu, řízení aut) se používají úlohově specifické benchmarky, metriky přesnosti a škálované srovnávací testy.
+
+Turingův předpoklad, že inteligenci lze chápat převážně jako jazykovou logickou konverzaci, byl doplněn důrazem na vnímání, tělesnost a interakci se světem.
+
+Původní symbolický obraz inteligence (manipulace explicitních pravidel) byl z velké části překryt statistickými a neuronovými metodami; dnešní hluboké učení a posilované učení realizují Turingovu ideu učících se strojů technicky jinak, než si mohl představit.
+
+\section{Vývoj terminpologie}
+\label{sec:vývoj-terminologie}
+Terminologie používaná v článku se od té doby vyvinula a některé pojmy získaly nové významy nebo byly nahrazeny jinými termíny.
+
+\subsection{Imitační hra a Turingův test}
+\label{subsec:terminologie-imitacni-hra}
+Pojem ,,imitační hra`` se dnes běžně označuje jako ,,Turingův test``. Tento termín se stal standardem v literatuře o umělé inteligenci a je široce uznáván jako klíčový koncept pro hodnocení schopností strojů.
+
+\subsection{Digitální počítač}
+\label{subsec:terminologie-digitani-pocitac}
+Turingův ,,digitální počítač`` odpovídá dnešnímu pojmu univerzální výpočetní architektury (např. von Neumannova architektura) a rozlišuje se mezi ,,hardwarem`` a ,,softwarem``. Turingova představa ,,tabulky chování`` se dnes označuje jako ,,program`` či ,,algoritmus``.
 
 \section{Závěr}
 \label{sec:zaver}
 
-Text závěru. Poslední sekcí také může být ,,Diskuze a závěr``.
+Článek ,,Computing Machinery and Intelligence`` představuje zlomový bod v dějinách umělé inteligence, protože nahrazuje neurčitou otázku ,,mohou stroje myslet?{}`` přesně formulovaným úkolem imitační hry (Turingova testu) a tím dává vzniknout experimentálnímu pojetí strojové inteligence. Turing zde vymezuje digitální počítač jako univerzální diskrétní stavový stroj řízený programem a zavádí myšlenku učících se a ,,dětských`` strojů, které se podobně jako člověk rozvíjejí prostřednictvím zkušenosti.
+
+Hlavní teze článku tvrdí, že v principu lze sestrojit stroje, jejichž jazykové chování bude v omezených podmínkách nerozlišitelné od lidského, a že běžné námitky proti strojové inteligenci (teologické, matematické, psychologické) tuto možnost definitivně nevyvracejí. Převratnost textu spočívá v propojení teoretické výpočetní koncepce s otázkou mysli a v nastavení argumentačního rámce, který ovlivňuje debatu dodnes.
+
+Mnohé Turingovy ideje zůstávají aktuální (univerzální počítač, důraz na učení, Turingův test jako myšlenkový experiment), jiné byly nahrazeny moderními přístupy, zejména statistickým a neuronovým učením a úlohově specifickými metrikami výkonu. Terminologie se posunula od ,,thinking machines`` k ,,systémům AI``, ,,modelům`` a ,,strojovému učení``, ale základní otázky zavedené Turingem zůstaly středem pozornosti.
 
 \begin{thebibliography}{11}
 \setlength{\parskip}{0ex}
 
-	\bibitem{autor-nejaka-kniha} \textsc{Autor, N.}: Nějaká kniha.
+	\bibitem{turing} \textsc{Turing, A. M.}: Computing Machinery and Intelligence. Mind 49: 433-460.
 
-	\bibitem{autor-jina-kniha} \textsc{Autor, J.}: Jiná kniha.
+	\bibitem{cnet-turing-outdated} \textsc{Westaway, L.}: Why 'outdated' Turing test is no longer the gold standard of AI \textless{}\url{https://www.cnet.com/culture/why-outdated-turing-test-is-no-longer-the-gold-standard-of-ai/}\textgreater{}.
 
-	\bibitem{autor-elektronicky} \textsc{Autor, D.}: Nějaký elektronický zdroj. \textless{}\url{https://www.nekde.xx/neco}\textgreater{}.
+	\bibitem{startupsgurukul} \textsc{Startupsgurukul}: The Turing Revolution: How Alan Turing Shaped the Future of Technology
+ \textless{}\url{https://startupsgurukul.com/blog/2024/05/08/the-turing-revolution-how-alan-turing-shaped-the-future-of-technology/}\textgreater{}.
 
-	\bibitem{malir-obrazek-neceho} \textsc{Malíř, N.}: Obrázek něčeho.
+	\bibitem{calavista} \textsc{Calavista}: From Turing to Today: The History and Terminology You Need to Understand AI
 
-	\bibitem{selinux-by-example} \textsc{Mayer, F. -- MacMillan, L. -- Caplan, K.:} \textit{SELinux by Example: Using Security Enhanced Linux.} 1$^{st}$\,Ed. Upper Saddle River, Prentice Hall 2006. 456\,s. ISBN-10: 0-13-196369-4.
+ \textless{}\url{https://www.calavista.com/history-of-artificial-intelligence/}\textgreater{}.
 
-	\bibitem{wiki-access-control} \textsc{Wikipedia:} \textit{Access Control} [online]. Poslední změna 2009-03-24 [cit. 2009-03-24]. Dostupný z~WWW: \textless\url{http://en.wikipedia.org/wiki/Access_Control}\textgreater.
+	\bibitem{wiki} \textsc{Wikipedia:} \textit{Turing test} [online]. Poslední změna 2025-12-01 [cit. 2025-12-14]. Dostupný z~WWW: \textless\url{https://en.wikipedia.org/wiki/Turing_test}\textgreater.
 
 \end{thebibliography}
-
-\appendix
-\section*{Přílohy}
-
-Text příloh – typicky rozsáhlejší tabulky, obrázky, zdrojové kódy, (lze i formou externích souborů), vždy okomentované a odkázané z hlavního textu.
 
 \end{document}
