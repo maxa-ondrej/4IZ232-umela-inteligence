@@ -1,0 +1,168 @@
+%Dokument pro XeLaTeX, překlad pomocí XeLaTeX
+\documentclass[a4paper,oneside,11pt,usenames,dvipsnames]{article}
+
+%XeLaTeXové věci a fonty
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Scale=MatchLowercase}
+
+%Písma
+%\setromanfont[Mapping=tex-text]{Linux Libertine O}
+%\setsansfont[Mapping=tex-text]{Linux Biolinum O}
+%\setmonofont[Mapping=tex-text]{Linux Libertine Mono O}
+
+%Pro správné dělení českých slov
+\usepackage{polyglossia}
+\setdefaultlanguage{czech} %TODO: Případně změňte jazyk
+%České uvozovky buď přímo nebo jako ,,uvozovky``
+
+%Některé speciální znaky
+\usepackage{textcomp}
+% Url
+\usepackage{url}
+\def\UrlFont{\ttfamily\slshape}
+
+%Barvy pro hyperref
+\usepackage{color}
+% Hyperref pro odkazy v PDF a URL
+\usepackage{hyperref}
+% Hyperref a PDF nastavení
+\hypersetup{
+    pdftitle={Titulek},    % title TODO: Vyplnit titulek
+    pdfauthor={Nějaký Autor},     % author TODO: Vyplnit autora
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=RoyalBlue,          % color of internal links
+    citecolor=RoyalBlue,        % color of links to bibliography
+    filecolor=RoyalBlue,      % color of file links
+    urlcolor=RoyalBlue           % color of external links
+}
+
+%Nadpisy, záhlaví a zápatí
+\usepackage[pagestyles]{titlesec}
+
+%Nadpisy bezpatkovým písmem
+\titleformat{\part}[display]{\filright}{\Large\sffamily Část\ \thepart}{0.25em}{\bfseries\sffamily\huge\upshape}
+\titleformat{\section}[block]{\sffamily\Large\bfseries}{\thesection}{1em}{\Large}
+\titleformat{\subsection}[block]{\sffamily\large\bfseries}{\thesubsection}{1em}{\large}
+\titleformat{\subsubsection}[block]{\sffamily\normalsize\bfseries}{\thesubsubsection}{1em}{\normalsize}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin {center}
+	\vspace *{10mm}
+	{\Huge \sffamily \bfseries Výstižný titulek práce}
+
+	\vspace *{20mm}
+	{\Large \sffamily \bfseries Nějaký autor}
+
+	\vspace *{7.5mm}
+	{\large \sffamily Nějaký datum}
+\end {center}
+
+\begin{abstract}
+	Abstrakt Text informativního abstraktu max. 200 slov, np.:
+	Technologie X je to a ono, používá se tam a tam. Experiment takový a takový přinesl tyto výsledky.
+\end{abstract}
+
+\setlength{\parskip}{1ex plus 0.25ex minus 0.125ex}
+  
+\section{Úvod}
+\label{sec:uvod}
+
+Text úvodu. Mělo by tu být zhruba:
+\begin{itemize}
+	\item Stručná charakteristika použitých AI technik.
+	\item Stručná charakteristika řešené/modelované domény.
+	\item Cílem této sekce je vysvětlit základy toho, s čím pracujete, a nasměrovat čtenáře na vhodnou literaturu s detaily.
+\end{itemize}
+
+Celkový rozsah tohoto dokumentu je cca 1200 slov (bez příloh).
+
+Pro PDF výstup: \verb|xelatex soubor.tex|.
+
+Struktura dokumentu je podle formátu \href{https://projects.ncsu.edu/eslglobe/nmswishe/IMRAD\%20Handout.pdf}{IMRAD}.
+
+Je-li sekce dále členěná, měl by tu být ,,obsahový odstavec``: V sekci \ref{subsec:uvod-o-tom} popíšu to, v sekci \ref{subsec:uvod-o-onom} zas ono.
+
+\subsection{Sekce o tom}
+\label{subsec:uvod-o-tom}
+
+Text.
+
+Odkazy na zdroje se po vyplnění bibliografické citace v sekci Reference vkládají do textu přes \verb|\cite{xxx}|. ,,Nějaká zajímavá myšlenka z jiné knihy`` \cite{autor-jina-kniha}. Většinou je ale práce s literaturou o vybrání důležitých myšlenek a jejich stručném shrnutí vlastními slovy. Parafráze zajímavých myšlenek z nějaké knihy, viz \cite{autor-nejaka-kniha}.
+
+\subsection{Sekce o onom}
+\label{subsec:uvod-o-onom}
+
+Text.
+ 
+\section{Metody}
+\label{sec:metody}
+
+Text. Mělo by tu být zhruba:
+\begin{itemize}
+	\item Popis postupu (návrh a realizace/experimenty), jak jste se dostali k výsledku z následující sekce.
+	\item Případné využití generativní AI by také mělo být zdokumentováno zde, detaily promptů v přílohách.
+	\item Cílem této sekce je umožnit čtenáři, aby provedl to, co vy a mohl si ověřit, že dojde ke stejnému/srovnatelnému výsledku.
+\end{itemize}
+
+\section{Výsledky}
+\label{sec:vysledky}
+
+Text. Mělo by tu být zhruba:
+\begin{itemize}
+	\item Popis výsledku (vytvořený model, chování systému, konkrétní měření experimentů), tj. co vám vyšlo, když jste provedli postup z předchozí sekce.
+	\item Je vhodné odkázat na detaily v příloze, ale neměl by tu být jen odkaz.
+	\item Cílem sekce je komunikovat čtenáři výsledek práce a umožnit mu srovnání při replikaci.
+\end{itemize}
+
+Obrázky, tabulky a podobně se vkládají nejprve jako plovoucí objekt. V textu by měla být zmínka o obrázku s křížovým odkazem na jeho značku, np.: Na obrázku \ref{fig:obrazek-neceho} je schéma něčeho. Křížové odkazy lze nastavit, aby zobrazovaly i stránku, což se může u plovoucích objektů hodit.
+
+\begin{figure}
+	\centering
+	%\includegraphics[width=1.0\linewidth]{cesta-k-obrazku.jpg}
+	Sem se teprve vloží vlastní obrázek pomocí \verb|includegraphics|. Obvykle je potřeba nastavit nějaké rozumné rozměry, nejlépe relativně k šířce řádku a zarovnat obrázek na střed.
+	\caption{Stručný popisek obrázku – pokud je přejatý pak s odkazem \cite{malir-obrazek-neceho}.\label{fig:obrazek-neceho}}
+\end{figure}
+
+
+\section{Diskuze}
+\label{sec:diskuze}
+
+Text. Mělo by tu být zhruba:
+\begin{itemize}
+	\item Komentář získaných výsledků (co znamenají?)
+	\item Zasazení výsledků do širšího kontextu (odpovídá to dalším znalostem z literatury?)
+	\item Přiznání možných limitů (co by šlo udělat lépe?)
+	\item Možnosti dalšího rozšíření.
+	\item Cílem sekce je výsledek zhodnotit a představit v kontextu.
+\end{itemize}
+
+\section{Závěr}
+\label{sec:zaver}
+
+Text závěru. Poslední sekcí také může být ,,Diskuze a závěr``.
+
+\begin{thebibliography}{11}
+\setlength{\parskip}{0ex}
+
+	\bibitem{autor-nejaka-kniha} \textsc{Autor, N.}: Nějaká kniha.
+
+	\bibitem{autor-jina-kniha} \textsc{Autor, J.}: Jiná kniha.
+
+	\bibitem{autor-elektronicky} \textsc{Autor, D.}: Nějaký elektronický zdroj. \textless{}\url{https://www.nekde.xx/neco}\textgreater{}.
+
+	\bibitem{malir-obrazek-neceho} \textsc{Malíř, N.}: Obrázek něčeho.
+
+	\bibitem{selinux-by-example} \textsc{Mayer, F. -- MacMillan, L. -- Caplan, K.:} \textit{SELinux by Example: Using Security Enhanced Linux.} 1$^{st}$\,Ed. Upper Saddle River, Prentice Hall 2006. 456\,s. ISBN-10: 0-13-196369-4.
+
+	\bibitem{wiki-access-control} \textsc{Wikipedia:} \textit{Access Control} [online]. Poslední změna 2009-03-24 [cit. 2009-03-24]. Dostupný z~WWW: \textless\url{http://en.wikipedia.org/wiki/Access_Control}\textgreater.
+
+\end{thebibliography}
+
+\appendix
+\section*{Přílohy}
+
+Text příloh – typicky rozsáhlejší tabulky, obrázky, zdrojové kódy, (lze i formou externích souborů), vždy okomentované a odkázané z hlavního textu.
+
+\end{document}
