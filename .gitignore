@@ -3,3 +3,4 @@ referat.pdf
 *.log
 *.aux
 *.properties
+.DS_Store
