@@ -184,7 +184,7 @@ run(
 
 ## Konfigurace 2 (1D CNN): Conv1D(64, kernel_size=3, activation=relu) → GlobalMaxPooling1D
 run(
-    "model_c",
+    "1d_cnn",
     main_layers=[
         layers.Conv1D(64, kernel_size=3, activation=default_activation),
         layers.GlobalMaxPooling1D(),
