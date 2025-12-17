@@ -213,7 +213,7 @@ run("hinge", loss="hinge")
 run("sgd", optimizer=keras.optimizers.SGD(learning_rate=0.01, momentum=0.9))
 
 ## RMSprop
-run("sgd", optimizer=keras.optimizers.RMSprop(learning_rate=0.001))
+run("rmsprop", optimizer=keras.optimizers.RMSprop(learning_rate=0.001))
 
 
 print(model_data)

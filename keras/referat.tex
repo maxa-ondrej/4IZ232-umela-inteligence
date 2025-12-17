@@ -117,18 +117,18 @@ Shrnutí hlavních konfigurací a jejich výsledků na validační sadě je uved
 \toprule
 Jméno běhu & Ztráta (test\_loss) & Přesnost (test\_acc) & Čas běhu \\
 \midrule
-default    & 0.543 & 0.733 & 8.52s \\
-5-epochs   & 0.682 & 0.507 & 5.75s \\
-20-epochs  & 0.494 & 0.767 & 13.99s \\
-16-batches & 0.467 & 0.760 & 11.94s \\
-64-batches & 0.646 & 0.687 & 6.80s \\
-model\_a   & 0.668 & 0.613 & 8.04s \\
-model\_c   & 0.433 & 0.773 & 8.85s \\
-1d\_cnn    & 0.401 & 0.820 & 10.32s \\
-tanh       & 0.502 & 0.753 & 7.99s \\
-hinge      & 1.014 & 0.473 & 8.01s \\
-sgd        & 0.696 & 0.473 & 5.38s \\
-sgd        & 0.696 & 0.473 & 6.93s \\
+default    & 0.569 & 0.753 & 8.45s \\
+5-epochs   & 0.681 & 0.540 & 5.82s \\
+20-epochs  & 0.455 & 0.773 & 12.92s \\
+16-batches & 0.437 & 0.800 & 11.51s \\
+64-batches & 0.654 & 0.680 & 7.04s \\
+model\_a   & 0.671 & 0.600 & 7.93s \\
+model\_c   & 0.432 & 0.787 & 8.53s \\
+1d\_cnn    & 0.398 & 0.807 & 9.65s \\
+tanh       & 0.525 & 0.753 & 8.40s \\
+hinge      & 1.012 & 0.473 & 7.69s \\
+sgd        & 0.696 & 0.473 & 5.47s \\
+rmsprop    & 0.693 & 0.473 & 6.71s \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -280,13 +280,25 @@ Z hlediska praktické práce s Kerasem a TensorFlow byla nejdůležitější zku
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=1.0\linewidth]{./images/sgd_loss.png}
-    \caption{Průběh ztráty pro konfigurace s optimalizátory SGD/RMSprop, které nedosahují dobré konvergence.\label{fig:sgd-loss}}
+    \caption{Průběh ztráty pro konfigurace s optimalizátorem SGD.\label{fig:sgd-loss}}
 \end{figure}
 
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=1.0\linewidth]{./images/sgd_accuracy.png}
-    \caption{Přesnost pro konfigurace s optimalizátory SGD/RMSprop; výkon zůstává nízký.\label{fig:sgd-acc}}
+    \caption{Přesnost pro konfigurace s optimalizátorem SGD.\label{fig:sgd-acc}}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\linewidth]{./images/rmsprop_loss.png}
+    \caption{Průběh ztráty pro konfigurace s optimalizátorem RMSprop.\label{fig:rmsprop-loss}}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\linewidth]{./images/rmsprop_accuracy.png}
+    \caption{Přesnost pro konfigurace s optimalizátorem RMSprop.\label{fig:rmsprop-acc}}
 \end{figure}
 
 \end{document}
